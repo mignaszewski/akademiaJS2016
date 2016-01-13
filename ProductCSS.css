@@ -1,0 +1,517 @@
+body, html {
+    /*background: url(http://www.fotoik.pl/zdjecia_2015/32722-20151118145425.jpg)
+    no-repeat; */
+    background-size: cover;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+ul li {
+    text-align: center;
+}
+.col-md-6{
+    text-align: center;
+}
+.col-xs-12{
+    text-align: center;
+}
+body {
+
+}
+p {
+    text-align: center;
+}
+
+.last
+{
+    border: none;
+}
+.first {
+    border-right: 1px solid black;
+}
+#f
+{
+    height: 100px;
+    width: 20%;
+}
+.col-md-6 ul li a{
+    padding: 0;
+    border: none;
+}
+.col-md-6 {
+    margin-top: 60px;
+    /*float: right;*/
+
+}
+
+.col-md-6 ul li a:hover{
+    padding: 0;
+    border: none;
+}
+
+#second {
+    padding: 30px 130px;
+}
+
+label {
+    margin-top: 15px;
+    display: block;
+}
+select {
+    width: 15%;
+    display: block;
+}
+.container-fluid a {
+
+}
+.container {
+    /*min-height:100%;*/
+    position: relative;
+    margin-top: 40px;
+}
+
+.col-sm-6{
+    margin: 10px;
+    height: 40px;
+}
+.col-md-3 {
+    background-color: #fbfff0;
+    padding: 60px 10px 10px 10px;
+
+}
+.col-md-2 {
+    display: inline-block;
+}
+img{
+    width: 80%;
+}
+.container .row {
+    margin-bottom: 30px;
+}
+
+.footer
+{
+    margin-top: 30px;
+    left:0;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:50px;
+    background: #DACFD6;
+    /*padding: 10px 10px;*/
+
+}
+
+.footer p {
+    color: #888888;
+    margin-left: 20px;
+    margin-top: 17px;
+    font-size: 12px;
+}
+
+#f {
+    width: 100%;
+}
+
+
+.container a {
+    color: #454745;
+}
+ol li {
+    display: inline-block;
+}
+
+a {
+    color: #454745;
+}
+.supporting {
+
+    text-align: right;
+    background: url("https://image.freepik.com/free-vector/black-and-white-city-skyline_23-2147504627.jpg");
+}
+
+.col-md-6 .container .btn {
+    border: 1px solid teal;
+    color: teal;
+
+}
+
+.buy {
+    background-color: #46C9B6;
+    padding: 10px 10px 10px 10px;
+    margin-top: 20px;
+    text-align: center ;
+}
+h4 {
+    margin-top: 100px;
+    display: block;
+    text-align: left;
+}
+/* This is the desktop version!
+
+
+**
+
+*
+
+**
+
+*/
+@media screen and (min-width: 1024px) {
+    ul li a {
+        margin-top: 40px;
+    }
+    .row a{
+        display: block;
+
+    }
+    .container-fluid a {
+
+        display: block;
+        margin-bottom: 10px;
+    }
+    .container
+    {
+        width: 100%;
+
+
+    }
+
+    h1 {
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #fff;
+        margin-top: 250px;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 1.0);
+        font-size: 20px;
+        font-weight: 200;
+    }
+
+    h2 {
+
+        text-align: right;
+        margin-top: -20px;
+    }
+
+    ul {
+        list-style: none;
+        display: inline-block;
+        background-color: #fff;
+
+    }
+
+    ul li {
+        display: inline-block;
+        padding: 10px 10px;
+        text-align: center;
+
+    }
+
+    ul li a {
+        text-transform: uppercase;
+        color: #000;
+        border-right: solid 1px black;
+        padding: 10px 50px 10px 10px;
+        text-align: center;
+        text-decoration: none;
+
+    }
+
+    ul li a:hover {
+        text-transform: uppercase;
+        color: #000;
+        border-right: solid 1px black;
+        padding: 40px 40px 40px 40px;
+        text-align: center;
+        background-color: #ffccff;
+        text-decoration: none;
+    }
+
+    .nav {
+
+        width: 100%;
+        height: 60px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .navbar {
+        color: #cccccc;
+        background-color: #fff;
+        padding: 10px 10px;
+
+    }
+
+    .navbar .navbar-header .last {
+        border-left: 1px solid black;
+        margin-left: -14px;
+        margin-right: 40px;
+        padding: 0px 5px;
+    }
+
+    .basket {
+        width: 15%;
+        margin-right: -15px;
+    }
+
+    .search {
+        width: 15%;
+    }
+
+    .logo {
+        width: 15%;
+        margin-right: 40px;
+    }
+
+    .navbar-right {
+        color: #000;
+    }
+
+    .navbar-right a {
+        background-color: #fff
+    }
+
+    .navbar ul li a {
+        padding: 0px 0px 0px 0px;
+        background-color: inherit;
+        border: none;
+    }
+
+    .supporting {
+        text-align: right;
+        height: 300px;
+        background-color: #e3e3e3;
+    }
+
+    .pull-right {
+        text-align: right;
+        color: #cccccc;
+        margin-top: -40px;
+    }
+
+    .pull-right a {
+        color: #888888;
+    }
+
+    span {
+        color: #cccccc;
+    }
+}
+/* This is the end of desktop version!
+
+
+**
+
+*
+
+**
+
+*/
+
+
+@media screen and (max-width: 1023px) {
+
+    body {
+        font-family: Helvetica;
+        font-size: 16px;
+        color: #333;
+    }
+    ul {
+        list-style: none;
+        color: #000;
+    }
+    ul li {
+        list-style:none;
+        display: inline-block;
+        color: black;
+    }
+
+    .navbar {
+        /*padding: 80px 40px 0px 0px;*/
+    }
+
+    .basket {
+        float: left;
+        width: 45%;
+        margin-right:-60px;
+    }
+    .navbar .navbar-header ul li {
+        display: inline-block;
+    }
+    .navbar .navbar-header ul li a{
+        display: inline-block;
+        color: #454745;
+        margin-right: -20px;
+    }
+    form {
+
+    }
+    .logo {
+        width: 100%;
+        display: block;
+        text-align: right;
+        margin-right:-400px;
+
+    }
+
+    .pull-right {
+        text-align: left;
+        color: #cccccc;
+        margin-top: -40px;
+        width: 40%;
+
+    }
+
+    .pull-right a {
+        color: #888888;
+        text-align: left;
+        display: inline-block;
+
+    }
+    .sign {
+        display: inline-block;
+        margin-left: 20px;
+    }
+
+    .navbar .navbar-header ul li a {
+        color: #333;
+    }
+    .navbar .navbar-header ul li {
+
+        margin-top: 140px;
+
+    }
+
+    .nav ul li a {
+        color: #454745;
+        padding: 20px 20px 20px 20px;
+        display: inline-block;
+    }
+
+
+    ul {
+        list-style: none;
+        display: block;
+
+    }
+
+    .nav ul {
+        background-color: #dacfd6;
+    }
+
+    ul li {
+        display: inline-block;
+        padding: 0 0;
+        text-align: center;
+
+    }
+
+    ul li a {
+        text-transform: uppercase;
+        color: #000;
+        text-align: left;
+        text-decoration: none;
+
+    }
+    .supporting {
+        margin-bottom: 10px;
+    }
+    img {
+        width: 99%;
+    }
+    .img-thumbnail {
+
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    nav a {
+        display: inline-block;
+
+    }
+    body, html {
+        background-color: #fff;
+    }
+
+    .navbar .navbar-header ul li a {
+        color: #333;
+    }
+    .navbar .navbar-header ul li {
+        text-align: center;
+        display: inline-block;
+    }
+    .navbar .navbar-header {
+        padding:10px;
+    }
+    .col-md-6 {
+        width: 100%;
+        /*display: inline;*/
+    }
+    .select {
+        -ms-box-sizing:content-box;
+        -moz-box-sizing:content-box;
+        -webkit-box-sizing:content-box;
+        box-sizing:content-box;
+    }
+    #second {
+        width: 100%;
+    }
+
+    select {
+        width: 100%;
+    }
+    .instock {
+        white-space: nowrap;
+        display: inline-block;
+        margin-left: -80px;
+    }
+    .col-xs-12 .form-control {
+        width: 150px;
+        margin-left: -80px;
+    }
+
+    .buy {
+        margin-left: -80px;
+        background-color: #daaba7;
+        padding: 10px 60px 10px 60px;
+        margin-top: 40px;
+        text-align: center ;
+    }
+
+.pull-right a {
+text-align:center;
+    margin-left: -140px;
+    display: block;
+    font-size: 16px;
+}
+    .nav {
+        margin: 0 auto;
+    }
+    .nav ul li {
+
+        width: 100%;
+    }
+    .nav ul {
+        display: none;
+    }
+
+    .col-xs-12 h4{
+        /*width: 200px;*/
+        margin-bottom: 50px;
+        margin-left: -80px;
+    }
+    .row ul li {
+        margin-top: 20px;
+        margin-left: -30px;
+        padding: 0 40px 0 0;
+
+    }
+    .glyphicon .glyphicon-log-in a{
+        margin-top: 40px;
+        margin-bottom: -200px;
+    }
+}
