@@ -10,12 +10,21 @@ body, html {
 
 
 }
-body {
 
+input.gsc-search-button {
+
+    display: inline-block;
+    border-radius: 0px;
+    height: 35px;
+    width: 50px;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 .last
- {
+{
     border: none;
 }
 .first {
@@ -29,11 +38,13 @@ body {
 
 
 .container-fluid a {
-margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 .container {
     /*min-height:100%;*/
     position: relative;
+    border-top: 1px solid#eee;
+    border-bottom: 1px solid  #d2d2d2;
 }
 
 .col-sm-6{
@@ -54,6 +65,7 @@ img{
 
 .footer
 {
+    border-top: 1px solid rgba(0,0,0,0.25);
     margin-top: 30px;
     left:0;
     position:absolute;
@@ -61,6 +73,7 @@ img{
     width:100%;
     height:70px;   /* Height of the footer */
     background: #DACFD6;
+    float: right;
     /*padding: 10px 10px;*/
 
 }
@@ -70,6 +83,20 @@ img{
     margin-left: 20px;
     margin-top: 17px;
     font-size: 12px;
+
+}
+.footer a {
+    float: right;
+    text-align: right;
+    margin-right: 30px;
+    margin-top: -30px;
+
+    color: #000;
+
+}
+.footer a:hover {
+    color: #17ffa5;;
+    text-decoration: none;
 }
 
 #f {
@@ -87,10 +114,23 @@ ol li {
 a {
     color: #454745;
 }
-.supporting {
-    padding: 110px 60px 20px 20px;
+.col-md-12 {
+    margin-top: 53px;
+    color: white;
+    height: 390px;
+    padding: 50px 60px 20px 60px;
     text-align: right;
-    background: url("https://image.freepik.com/free-vector/black-and-white-city-skyline_23-2147504627.jpg");
+    background: url("http://i.huffpost.com/gen/1703513/images/o-LOS-ANGELES-facebook.jpg" )no-repeat center center ;
+    background-size: 100% 160%;}
+
+.col-md-3 {
+    background: none;
+}
+
+.nav {
+    margin-top: -44px;
+    position: fixed;
+    z-index: 9999;
 }
 /* This is the desktop version!
 
@@ -119,6 +159,12 @@ a {
     {
         width: 100%;
 
+
+    }
+    #title {
+        color: white;
+        font-family: Helvetica;
+        margin-bottom: -50px;
 
     }
 
@@ -162,12 +208,8 @@ a {
     }
 
     ul li a:hover {
-        text-transform: uppercase;
-        color: #000;
-        border-right: solid 1px black;
-        padding: 10px 60px 10px 10px;
-        text-align: center;
-        background-color: #ffccff;
+        color: #46C9B6;
+        font-weight: 600;
         text-decoration: none;
     }
 
@@ -177,6 +219,12 @@ a {
         height: 60px;
         padding: 15px;
         text-align: center;
+    }
+
+    .nav {
+        margin-top: -52px;
+        position: fixed;
+        z-index: 9999;
     }
 
     .navbar {
@@ -223,7 +271,7 @@ a {
 
     .supporting {
         text-align: right;
-height: 300px;
+        height: 300px;
         background-color: #e3e3e3;
     }
 
@@ -271,7 +319,7 @@ height: 300px;
     }
 
     .navbar {
-       padding: 20px 20px 20px 20px;
+        padding: 20px 20px 20px 20px;
     }
 
     .basket {
@@ -291,8 +339,8 @@ height: 300px;
 
     }
     .logo {
-width: 100%;
- display: block;
+        width: 100%;
+        display: block;
         text-align: right;
         margin-right:-400px;
 
@@ -309,7 +357,7 @@ width: 100%;
     .pull-right a {
         color: #888888;
         text-align: left;
-       display: inline-block;
+        display: inline-block;
 
     }
     .sign {
@@ -362,10 +410,11 @@ width: 100%;
         margin-bottom: 10px;
     }
     img {
-width: 99%;
+        width: 99%;
+        border: 3px solid #e5d8df;
     }
     .img-thumbnail {
-
+        border: 8px solid #e5d8df;
     }
 
 
