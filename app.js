@@ -1,17 +1,35 @@
 var aom = []; //array of modules
-angular.module("Store", aom).
-controller('StoreController', function($scope) {
-    $scope.gallery = ['first.jpg', 'second.jpg', 'third.jpg'];
+angular.module("Store", []).
+controller('StoreController', ['$http', '$scope', function($http, $scope) {
+    $scope.query ="";
 
+
+    $scope.URL = "https://www.googleapis.com/customsearch/v1";
+
+
+    $scope.queryObj = {
+        key: "AIzaSyAfv88ge0srbdRAMM92WpZfYhSFc0IDcRY",
+        cx: "011106400896487923477:vutdejdv5t0",
+        q: "",
+        searchType: "image",
+        count: 220
+
+    }
+
+    $scope.searchResult =[];
+
+
+
+
+    $scope.gallery = ['first.jpg', 'second.jpg', 'third.jpg'];
     $scope.items = 3;
     $scope.current = 'second.jpg';
-
     $scope.myArr = [1, 2, 3];
+
 
 
     $scope.toggle = function(newPic){
     $scope.current =newPic;
-
 };
 
 
@@ -46,6 +64,49 @@ controller('StoreController', function($scope) {
         $scope.notesCollection.push(this.note);
     }
 
+    $scope.haveResults = false;
+
+
+    $scope.getRequest = function() {
+
+        $scope.queryObj.q = $scope.query;
+
+        $http({
+            method: 'GET',
+            url: $scope.URL,
+            params: $scope.queryObj
+        }).then(function successCallback(response) {
+            $scope.searchResult = response.data.items;
+            console.log(response.data.items);
+            $scope.haveResults = true;
+
+        }, function errorCallback(response) {
+            $scope.searchResult = response.data.error();
+        });
+
+        $scope.setCount = function(){
+            $scope.resultCount = 100;
+            $scope.currentPage = 3;
+        };
+        $scope.lastPage = 1; //initial value
+        $scope.translationsOverview = [];
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
 
     $scope.notesCollection = [
         note1= {
@@ -73,5 +134,5 @@ controller('StoreController', function($scope) {
 
 
 
-});
+}]);
 
