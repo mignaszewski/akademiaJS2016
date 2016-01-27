@@ -66,13 +66,26 @@
 
 <div class="main">
     <div ng-show="haveResults"> <!--Display only in case when user searches for data in searchbox" -->
-        <pagination total-items= "resultCount" ng-model= "currentPage" ng-change= "pageChanged()">
-        <div ng-repeat="item in searchResult">
-            <div class="col-md-2">
-            <img class="thumbnail" ng-src={{item.image.thumbnailLink}}>
+        <div class=container=fluid">
+            <div class="container" ng-cloak>
+
+<div class="row" id="results" >
+
+                <div ng-repeat="item in searchResult">
+
+            <div class="col-md-3">
+            <img class="object-fit-contain" ng-src={{item.image.thumbnailLink}}>
             </div>
+                </div> </div>
+            <ul>
+                <li> <a id="btn1" ng-click="callPrevious()" href="#" > Previous</a></li>
+                <li> <a id="btn2" ng-click="callNext()" href ="#" > Next </a></li>
+            </ul>
+
+                <
+
         </div>
-        </pagination>
+    </div>
     </div>
 
 
@@ -90,7 +103,8 @@
             </ol>
         </div>
     </div>
-    <div class="container-fluid">
+    <div ng-hide="haveResults" class="container-fluid">
+    <div ng-hide="haveResults" class="container-fluid">
         <div class="container">
             <div class="row">
                 <div class="col-xs-6 col-md-3 ">

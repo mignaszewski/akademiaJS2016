@@ -13,10 +13,18 @@ controller('StoreController', ['$http', '$scope', function($http, $scope) {
         q: "",
         searchType: "image",
         count: 220
-
     }
 
     $scope.searchResult =[];
+    $scope.queryObj.startIndex = 1;
+    $scope.resultCount = 0;
+
+    $scope.pagesCount = function(resultNum){
+        return Math.floor(resultNum / 10);
+    }
+
+
+    $scope.currentPage = 1;
 
 
 
@@ -59,6 +67,7 @@ controller('StoreController', ['$http', '$scope', function($http, $scope) {
         this.image= 'second.jpg';
     };
     $scope.note = {};
+    $scope.resp = {};
 
     $scope.addNote = function(){
         $scope.notesCollection.push(this.note);
@@ -80,25 +89,65 @@ controller('StoreController', ['$http', '$scope', function($http, $scope) {
             console.log(response.data.items);
             $scope.haveResults = true;
 
+            $scope.nextQuery = response.data.queries.nextPage;
+
+
+
+
         }, function errorCallback(response) {
             $scope.searchResult = response.data.error();
         });
 
-        $scope.setCount = function(){
-            $scope.resultCount = 100;
-            $scope.currentPage = 3;
-        };
-        $scope.lastPage = 1; //initial value
-        $scope.translationsOverview = [];
+
+
+    };
+
+
+    $scope.callNext = function() {
+
+        $scope.queryObj.start += 10;
+
+            $http({
+            method: 'GET',
+            url: $scope.URL,
+            params: $scope.queryObj
+        }).then(function successCallback(response) {
+            $scope.searchResult = response.data.items;
+            console.log(response.data.items);
+            $scope.haveResults = true;
 
 
 
-
-
+        }, function errorCallback(response) {
+            //$scope.searchResult = response.data.error();
+        });
 
 
     }
 
+    $scope.callPrevious= function(){
+
+        $scope.queryObj.start-= 10;
+        $scope.
+
+        $http({
+            method: 'GET',
+            url: $scope.URL,
+            params: $scope.queryObj
+        }).then(function successCallback(response) {
+            $scope.searchResult = response.data.items;
+            console.log(response.data.items);
+            $scope.haveResults = true;
+
+
+
+        }, function errorCallback(response) {
+            //$scope.searchResult = response.data.error();
+        });
+
+
+
+    }
 
 
 
