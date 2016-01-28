@@ -16,9 +16,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <script type="text/javascript" src="app.js"></script>
+    <script src="app.js"></script>
 
     <title>Asos</title>
+
 </head>
 
 
@@ -38,8 +39,8 @@
         <div class="form-group">
             <input type="text" class="form-control" id="searchFor" ng-model="query"
                    placeholder="Browse the Collection...">
-            <label for="searchFor"><img ng-click="getResults(1)" class="search"
-                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHcAAAB3CAMAAAAO5y+4AAAAPFBMVEX///+SlZyPkpmLjpb8/PyIi5OwsreWmaDz8/TV1tnIyc3Q0dSqrLK4ur7t7u+cn6Xc3d/Bw8ejpavj5OVb2uEzAAAEtUlEQVRogc1b2XbjIAyNARvvePn/fx1cN2kmuoAE9nTuU3tOzAVZO/LjwYCZu35qNmcra93YrMPSch4rgllWp5VWSlUn/F/+/6oZ5vtI226stH4y/gVP7tb9FtZ5spjzxa22zlzNuo8qSvp9attf+q7nsU6zfkFX/WVnNlNcwB/MdrmGtvP6KkI9XiBsM9Yy1up4z10p7cxQJ3TkqYx2EIr458hbiazXXFpPbPM92JRPW0JcRHv4rzzHWUibe+KCd/tDLFeuTm62iFhKOydoj7jroRLmrUYZrYktp3Rtx6kfuqFfm03VMe+tBxFvE1zKR/ima99ijtnXLRKtaoluLSEpK+0GqitmnoLyVo5Pa4JS25ZAdA0z13xJT3gJFY3p8xgwPMU1phkvoFziVfWB5xomL1YqRmgLBE3NU60dKlXdMx5tK0TMNGJ4XKYdGgcf5gSIGT7JOe2BFhErTvaBwpDmpy0zekmM+GAs2O/GpvU+B+07LS70WCWKo8D6GU4LaBX75Z4wDkgstXPkIp2w8gChO2kOQMy1uO7YiMySgl6pmAUB5bl5emCVkBndakbNAd5wynUAXcyoK2lOqOK6SUMRO5q8oyWCTiyzXCFmDyroeGZJQ2idVV9R36GFv69yaB8d2b+O7p94K2kC/A2afscVmpiRWrN4DeWNeh+iD0Lf/ALljeonCYLCfP8FqlfRhT5/nWlGaKH/kve35Ez0KuFXgxDqFbWjvEaU1I6u8hs79VfRTIeG/bhfDYH22+J+Hvw+qwtFs8P4/ml6lafQn6ukEiwQ9yU5+xO0tEvpJ42DOQEYhN+E2EBeJ49IIAlP9QxBzW7FiR0q/BOP7KBMkWoWKO3SbgCVg8I3DI6bDi8gwxJUvwdg4Z7cOhB0wrd+gqomx9uiKpJTr7+A+secKN6jBsXG1ukOSZljErBBwQ5L6DUxk0PYJWSWSZCWoVUHcJtQc06MW25ce8B9Qu2Sux5w+5hr/22gHVvHtbIN3CTyU/9AY9XLOpIEDKEGNL8tA23468hqwsymg43JE/zrK6wfJ3NDW+5z72J3G4rv7iKXVkq7ppufNxum3dctdTEtII6I7aDWdhsbj9GpwGRFJnFAp9+WOpGkPMEvs2jmXQQ+ccAJ5CJh/G8IWXEuMTtdupqY7beypwow+A5zyZuiKCfe7bXE7BrAbJfKWlB8rJKhoDSx4EbIySw5rhOSZHyo+MJWddNH96kFDW3TM2ehVH2kBnFXJyF+tL1Nj5xp3ZwxPj6EISL2KcWootFdu59kJEUsK23nYbMw3B5jjNP+vhhtfJcQe3kv62aPwP8df7/CvmuG+XMhWK8UED+OsYll6Kdm9JjWYdlxepw48Xj5qCWTmF/qSQGvdF9Q0utOPgJV2pNY3rC5ivi2AeZ4dqjSpV4uYJPlnxDDUZIf4tvmtRPEBWOWhcS/Juq7eAPjQk/kXgVyiKNpac5NPpc4VteWT0vnEWfeUfGAJ7NO3KdZCeI7eSPE4ilaITHoTH8h56pIRgzD0616dRLD2U5ZO/864ryrTyFxQ28g7/OTMeKsC8gc/E18Yxz8xPvnPbrouw4hlu8vt3yRs94XixB2X2VZNz2/C/sDMA0uB8XJjRMAAAAASUVORK5CYII="></label>
+            <label for="searchFor"><img id="searchSymbol" ng-click="getResults(1)" class="search"
+                                        src="search.png"></label>
 
         </div>
     </form>
@@ -65,21 +66,29 @@
 </div>
 
 
-<ul class="result_section">
-    <li class="col-md-3" ng-repeat="item in results">
-        <a href="{{item.link}}" target="_blank" class="borderless">
-            <img class="object-fit_contain" ng-src="{{item.image.thumbnailLink}}">
-            <div class="helper"></div>
-        </a>
-    </li>
-    <div class="row">
-    <aside ng-show="haveResults" class="pages-navigation">
-        <li class="pages" ng-repeat="nr in pgnumbers">
-            <button class="pagenumber" ng-click="getResults(nr)">{{(((nr-1)/8)+1)}}</button>
-        </li>
-    </aside>
+
+<div class="container container-fluid" ng-show= "haveResults" >
+
+    <h1>Results</h1>
+    <h4>{{numPages()}} remain</h4>
+    <ul>
+        <div class="row" >
+            <div class="col-md-3"  ng-repeat="item in results">
+                    <img id="imgResult" class="object-fit-contain" ng-src="{{item.image.thumbnailLink}}">
+
     </div>
-</ul>
+        </div>
+    </ul>
+
+
+
+
+<div id="pagi" ng-show="haveResults" data-pagination="" data-num-pages="numPages()"
+
+     data-current-page="currentPage" data-max-size="maxSize"
+     data-boundary-links="true"></div>
+
+</div>
 
 
 <div class="main">
