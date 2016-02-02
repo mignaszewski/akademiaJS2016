@@ -5,9 +5,9 @@
 <body ng-app="Store" ng-controller="StoreController">
 <meta charset="UTF-8">
 <link rel="stylesheet" href="ProductCSS.css">
-<script type= "text/javascript" src="angular.min.js"></script>
+<script type="text/javascript" src="angular.min.js"></script>
 <script type="text/javascript" src="angular-route.js"></script>
-    <script data-require="angular-ui-bootstrap@0.3.0" data-semver="0.3.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.3.0.min.js"></script>
+<script data-require="angular-ui-bootstrap@0.3.0" data-semver="0.3.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.3.0.min.js"></script>
 
 
 <link href="http://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet">
@@ -32,28 +32,27 @@
         <li><a class="last" href="#">PLN</a></li>
     </ul>
 
-    <script>
-    (function() {
-        var cx = '011106400896487923477:vutdejdv5t0';
-        var gcse = document.createElement('script');
-        gcse.type = 'text/javascript';
-        gcse.async = true;
-        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-            '//cse.google.com/cse.js?cx=' + cx;
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(gcse, s);
-    })();
-</script>
-    <gcse:search></gcse:search>
 
+    <!--<div class="collapse navbar-collapse" id="myNavbar">-->
+    <form class="form-inline">
+        <div class="form-group">
+            <input type="text" class="form-control" id="searchFor" ng-model="query"
+                   placeholder="Browse the Collection...">
+            <label for="searchFor"><img id="searchSymbol" ng-click="getResults(1)" class="search"
+                                        src="search.png"></label>
+
+        </div>
+    </form>
+    <!--</div>-->
     <div class="pull-right">
-        <img class="logo"
-             src="data:image/png;base64,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">
-        <a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
-        <a class="sign" href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+        <a href="IndexHTML.html" ><img class="logo"
+             src="logo.jpg" /> </a>
+        <a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up   </a>
+        <a ng-hide="isLogged" ng-click="toLog()" class="sign" href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+        <a ng-show="isLogged" class="sign" href="#"><span class="glyphicon glyphicon-log-in"></span>{{"  " + uName + " Logout "}}</a>
     </div>
 
-</div>
+</div>  <!--end of navbar -->
 
 
 <div class="nav">
@@ -66,7 +65,7 @@
     </ul>
 </div>
 
-<div class="fluid-container">
+<div ng-hide="action" class="fluid-container">
     <div class="container">
         <div class="row">
             <div ng-init="current=2" class="col-md-6  col-sm-12 col-xs-12">
@@ -118,10 +117,14 @@
         </div>
     </div>
 
+
     <div class="col-md-12 col-sm-12 col-xs-12">
         <p> A long OPTIONAL description about the choosen product you can buy it in the price of...
             bla bla bla</p>
     </div><!-- DESCRIPTON-->
+
+
+
 
     <div class="row" >
         <div class="container marketing">
@@ -153,6 +156,32 @@
 
 
 
+    <div class="container container-fluid" ng-show="haveResults" > <!--Div outputting results-->
+        <h1>Results</h1>
+        <h3>{{numPages()}} remain</h3>
+        <ul>
+            <div class="row" >
+                <div class="col-md-3" id="results" ng-repeat="item in results">
+                    <img id="imgResult" class="object-fit-contain" ng-src="{{item.image.thumbnailLink}}">
+                </div>
+            </div>
+        </ul>
+
+
+
+
+        <div id="pagi" ng-show="haveResults" data-pagination="" data-num-pages="numPages()"
+             data-current-page="currentPage" data-max-size="maxSize"
+             data-boundary-links="true"></div>
+    </div>
+
+
+    <section class="itemsInCart" >
+
+            <h2> Currently {{items}} in cart.</h2>
+
+
+    </section>
 
     <div id="f" class="container">
         <div class="footer">

@@ -6,7 +6,8 @@
 
 
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/myCSS.css">
+    <link rel="stylesheet" href="myCSS.css">
+    <link rel="stylesheet" href="reset.css">
     <script type="text/javascript" src="angular.min.js"></script>
     <script type="text/javascript" src="angular-route.js"></script>
     <script data-require="angular-ui-bootstrap@0.3.0" data-semver="0.3.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.3.0.min.js"></script>
@@ -46,8 +47,8 @@
     </form>
     <!--</div>-->
     <div class="pull-right">
-        <img class="logo"
-             src="data:image/png;base64,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">
+        <a href="indexHTML.html" ><img class="logo"
+             src="logo.jpg"> </a>
         <a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
         <a ng-hide="isLogged" ng-click="toLog()" class="sign" href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a>
         <a ng-show="isLogged" ng-click="logout()" class="sign" href="#"><span class="glyphicon glyphicon-log-in"></span>{{"  " + uName + " Logout "}}</a>
@@ -58,7 +59,7 @@
 
 <div class="nav">
     <ul>
-        <li><a href="#">Accesories</a></li>
+        <li><a class="yeah" href="#">Accesories</a></li>
         <li><a href="#">Outwear</a></li>
         <li><a href="#">Knitwear</a></li>
         <li><a href="#">Bags</a></li>
@@ -123,19 +124,25 @@
                     <div class="col-xs-6 col-md-3 ">
                         <a href="#"><img class="img-thumbnail"
                                          src="http://data.whicdn.com/images/219209312/large.jpg"></a>
-                        <a href="#">Details</a></div>
+                        <a href="#">Add to cart</a>        <br>
+                        <h5> 13€</h5></div>
+
                     <div class="col-xs-6 col-md-3">
                         <a href="#"><img class="img-thumbnail"
                                          src="https://45.media.tumblr.com/481d66b82e6f8f2c7bac94915b08251b/tumblr_mmhchkGWpd1sotab9o1_400.gif"></a>
-                        <a href="#">Details</a></div>
+                        <a href="#">Add to cart</a>  <br>
+                        <h5> 199€</h5></div>
 
-
-                    <div class="col-xs-6 col-md-3">
+<div class="col-xs-6 col-md-3">
                         <a href="#"><img class="img-thumbnail" src="http://data.whicdn.com/images/219220442/large.jpg"></a>
-                        <a href="#">Details</a></div>
+                        <a href="#">Add to cart</a> <br>
+    <h5> 111€</h5></div>
+
                     <div class="col-xs-6 col-md-3">
                         <a href="#"><img class="img-thumbnail" src="http://data.whicdn.com/images/219214384/large.jpg"></a>
-                        <a href="#">Details</a></div>
+                        <a href="#">Add to cart </a>   <br>
+                        <h5> 188€</h5></div>
+
                 </div>
             </div>
         </div>

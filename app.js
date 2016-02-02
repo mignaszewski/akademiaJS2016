@@ -1,7 +1,6 @@
 var Store = angular.module("Store", ['ui.bootstrap']);
 
 
-
 Store.controller('StoreController', ['$http', '$scope', function ($http, $scope) {
 
     //     ** *** **
@@ -12,13 +11,13 @@ Store.controller('StoreController', ['$http', '$scope', function ($http, $scope)
     //
     //     ** *** **
 
-         $scope.query = "";
+    $scope.query = "";
 
-        $scope.results = [];
-          $scope.currentPage = 1
+    $scope.results = [];
+    $scope.currentPage = 1
         , $scope.numPerPage = 10
         , $scope.total = 0,
-            $scope.maxSize = 5;
+        $scope.maxSize = 5;
 
 
     $scope.getResults = function (pgnumber) {
@@ -142,7 +141,7 @@ Store.controller('StoreController', ['$http', '$scope', function ($http, $scope)
     // *****
 
     $scope.isLogged = false;   //to show "login" button
-    $scope.uName= ''; //to store the name in the field
+    $scope.uName = ''; //to store the name in the field
 
 
     $scope.users = [
@@ -150,62 +149,87 @@ Store.controller('StoreController', ['$http', '$scope', function ($http, $scope)
             name: 'Ania',
             login: 'pony',
             password: 'js',
-            salt: 'kcMJkcMJWNukOkcMJ1a9G2tD'
+            salt: 'kcMJkcMJWNukOkcMJ1a9G2tD',
+            psalt: 'jskcMJkcMJWNukOkcMJ1a9G2tD'
         },
         {
             name: 'Justin',
             login: 'justinbieber',
             password: 'porshe911',
-            salt: 'NTAnZuskcMJNNukOkcMJ1a9G2tD'
+            salt: 'NTAnZuskcMJNNukOkcMJ1a9G2tD',
+            psalt: 'porshe911NTAnZuskcMJNNukOkcMJ1a9G2tD'
 
         },
         {
             name: 'John',
             login: 'admin',
-            password: 'kcMJWRkcMJukOkcMJ1a9G2tD'
+            password:'admin',
+            salt: 'kcMJWRkcMJukOkcMJ1a9G2tD',
+            psalt: 'kcMJWRkcMJukOkcMJ1a9G2tD'
         },
         {
             name: 'John',
             login: 'jhny',
             password: 'lena123',
-            salt: 'MJ1a9G2WNukOkcMJ1a9G2tD'
+            salt: 'MJ1a9G2WNukOkcMJ1a9G2tD',
+            psalt: "lena123MJ1a9G2WNukOkcMJ1a9G2tD"
         }
     ];
 
-    $scope.username= '';
+    $scope.username = '';
     $scope.password = '';
 
-    $scope.toLog = function() {
+    $scope.uName = sessionStorage.getItem('userName');
+    $scope.isLogged = sessionStorage.getItem('isLogged');
+
+    $scope.toLog = function () {
         $scope.action = true;
         $scope.triesToLog = true;
     }
 
 
+    $scope.login = function () {
+
+        var login = $scope.username;
+        var pass = $scope.password;
+
+        $scope.users.forEach(function (credentials) {
+            if (credentials.login == login && pass + credentials.salt== credentials.psalt) {
+                $scope.uName = credentials.name;
+                sessionStorage.setItem('userName', $scope.uName);
+                sessionStorage.setItem('isLogged', true);
+
+                alert("Logged as: " + $scope.uName);
+                //$scope.isLogged = true;
+                $scope.triesToLog = false;
+                $scope.action = false;
+
+                $scope.uName = sessionStorage.getItem('userName');
+                $scope.isLogged = sessionStorage.getItem('isLogged');
+            }
+
+        })
 
 
-    $scope.login = function(){
-
-            var login = $scope.username;
-            var pass =  $scope.password;
-
-            $scope.users.forEach(function(credentials){
-                if (credentials.login == login && credentials.password == pass)
-                {
-                    $scope.uName = credentials.name;
-                    alert("Zalogowano jako" + $scope.uName);
-                    $scope.isLogged = true;
-                    $scope.triesToLog = false;
-                    $scope.action = false;
-                }
-            })
-
-
-
+        if (!$scope.isLogged){
+            alert("Dane nia sa prawidłowe!");
+        $scope.triesToLog = true;
+        $scope.action = true;}
 
     };
-    $scope.logout = function(){
+
+    // Save data to sessionStorage
+
+
+// Get saved data from sessionStorage
+
+
+    $scope.logout = function () {
         $scope.isLogged = false;
         $scope.username = '';
+
+        sessionStorage.setItem('userName', undefined);
+        sessionStorage.setItem('isLogged', false);
     }
 
 
@@ -221,10 +245,9 @@ Store.controller('StoreController', ['$http', '$scope', function ($http, $scope)
     //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 
-
     $scope.products = []
 
-    $scope.addToCart = function(product) {
+    $scope.addToCart = function (product) {
         products.push(product);
     }
 
