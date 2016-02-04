@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2016 by original authors @ fontello.com</metadata>
+<defs>
+<font id="icon-mail-alt" horiz-adv-x="1000" >
+<font-face font-family="icon-mail-alt" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="user" unicode="&#xe800;" d="m786 66q0-67-41-106t-108-39h-488q-67 0-108 39t-41 106q0 30 2 58t8 61 15 60 24 55 34 45 48 30 62 11q5 0 24-12t41-27 60-27 75-12 74 12 61 27 41 27 24 12q34 0 62-11t48-30 34-45 24-55 15-60 8-61 2-58z m-179 498q0-88-63-151t-151-63-152 63-62 151 62 152 152 63 151-63 63-152z" horiz-adv-x="785.7" />
+<glyph glyph-name="off" unicode="&#xe801;" d="m857 350q0-87-34-166t-91-137-137-92-166-34-167 34-136 92-92 137-34 166q0 102 45 191t126 151q24 18 54 14t46-28q18-23 14-53t-28-47q-54-41-84-101t-30-127q0-58 22-111t62-91 91-61 111-23 110 23 92 61 61 91 22 111q0 68-30 127t-84 101q-24 18-28 47t14 53q17 24 47 28t53-14q81-61 126-151t45-191z m-357 429v-358q0-29-21-50t-50-21-51 21-21 50v358q0 29 21 50t51 21 50-21 21-50z" horiz-adv-x="857.1" />
+<glyph glyph-name="basket" unicode="&#xe802;" d="m357-7q0-29-21-50t-50-22-50 22-22 50 22 50 50 21 50-21 21-50z m500 0q0-29-21-50t-50-22-51 22-21 50 21 50 51 21 50-21 21-50z m72 607v-286q0-13-10-23t-22-12l-583-68q7-34 7-40 0-8-13-35h513q15 0 26-11t10-25-10-25-26-11h-571q-14 0-25 11t-11 25q0 6 5 18t9 20 12 22 8 16l-98 460h-114q-15 0-25 10t-11 25 11 26 25 10h143q9 0 16-3t10-9 8-14 4-14 3-17 3-14h670q14 0 25-11t11-25z" horiz-adv-x="928.6" />
+</font>
+</defs>
+</svg>

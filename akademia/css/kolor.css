@@ -1,0 +1,128 @@
+body
+{
+	background-color: #ffd8ad;
+	color: #000000;
+}
+
+.naglowek
+{
+	background-color: #ff6624;
+	color: #ffffff;
+}
+
+.pasek
+{
+	background-color: #ff6624;
+}
+
+.pasek2
+{
+	background-color: #ffa382;
+}
+
+.przyciskT
+{
+	color: #CC0000;
+}
+
+#stopka
+{
+	background-color: #ff6624;
+	color: #ffffff;
+}
+
+/* nieodwiedzony link */
+a:link
+{
+	color: #ffffff;
+}
+
+/* odwiedzony link */
+a:visited
+{
+	color: #ffffff;
+}
+
+/* podświetlony link */
+a:hover
+{
+	color: #000000;
+}
+
+/* podświetlony link */
+.opis a:hover
+{
+	color: red;
+}
+
+/* nieodwiedzony link */
+.opis a:link
+{
+	color: green;
+}
+
+/* odwiedzony link */
+.opis a:visited
+{
+	color: blue;
+}
+
+ol a
+{
+	color: #ffffff;
+}
+
+ol a:hover
+{
+	color: #ffffff;
+}
+
+ol > li:hover
+{
+	background-color: #ffa382;
+}
+
+ol > li > ul a /* wygląd linków znajdujących się wewnąrz struktury ol */
+{
+	color: #ffffff;
+}
+
+ol > li > ul > li /* stylizacja elementu li którego rodzicem jest ol */
+{
+	background-color: #ffa382;
+}
+
+ol > li > ul > li:hover
+{
+	background-color: #ffd8ad;
+}
+
+ol1 a
+{
+	color: #000000;
+}
+
+ol1 > li a:hover
+{
+	color: #000000;
+}
+
+ol1 > li > ul a /* wygląd linków znajdujących się wewnąrz struktury ol */
+{
+	color: #000000;
+}
+
+ol1 > li > ul a:hover /* wygląd linków znajdujących się wewnąrz struktury ol */
+{
+	color: #000000;
+}
+
+ol1 > li > ul > li /* stylizacja elementu li którego rodzicem jest ol */
+{
+	background-color: #ffa382;
+}
+
+ol1 > li > ul > li:hover
+{
+	background-color: #ffa382;
+}

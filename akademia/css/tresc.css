@@ -1,0 +1,135 @@
+﻿@media all and (min-width: 480px) and (min-height: 768px)
+{
+	.pole_prawe, .pole_lewe
+	{
+		float: none;
+		width: auto;
+		margin: 15px;
+	}
+}
+
+.pole_prawe
+{
+	float: left;
+	width: 415px;
+	text-align: justify;
+	padding-left: 50px;
+	padding-right: 25px;
+	padding-top: 25px;
+	padding-bottom: 25px; 
+	position: top;
+}
+
+.pole_prawe_min	/*responsywność*/
+{
+	margin: 15px 0;
+	padding: 15px;
+}
+
+.pole_lewe
+{
+	float: left;
+	width: 415px;
+	text-align: justify;
+	padding-left: 25px;
+	padding-right: 50px;
+	padding-top: 25px;
+	padding-bottom: 25px; 
+	position: top;
+}
+
+.pole_lewe_min	/*responsywność*/
+{
+	margin: 15px 0;
+	padding: 15px;
+}
+
+.zdjecie
+{
+	float: left;
+	width: 100px;
+	height: 100px;
+}
+
+.opis
+{
+	float: left;
+	width: 205px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.dodaj
+{
+	float: left;
+	width: 90px;
+	text-align: center;
+}
+
+.submit
+{
+	background: #ff6624; 
+	color: #ffffff;
+	padding: 5px;
+	border: 0px solid #000000; 
+	font-size: 12px;
+}
+
+ol2
+{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-size: 16px;
+	height: 30px;
+	line-height: 200%;
+	/*display: inline-block;*/
+}
+
+ol2 a
+{
+	text-decoration: none;
+	display: block;
+}
+
+ol2 > li
+{
+	padding-left: 10px;
+	height: 30px;
+	border: 1px dashed #ffffff;
+}
+
+ol2 > li > ul
+{
+	padding: 10;
+	margin: 0;
+	list-style-type: none;
+	font-size: 16px;
+	height: 30px;
+	line-height: 200%; 
+	display: none;/* schowanie podmenu/potomków*/
+}
+
+/* aby było rowijane menu po jajechaniu kursorem na link */
+ol2 > li:hover > ul
+{
+	display: block; /* pokazuj podmenu/potomków jako element blokowy */
+}
+
+ol2 > li > ul a /* wygląd linków znajdujących się wewnąrz struktury ol */
+{
+	text-decoration: none;
+	display: block;
+}
+
+ol2 > li > ul > li /* stylizacja elementu li którego rodzicem jest ol */
+{
+	float: left;
+	width: 140px;
+	height: 30px;
+	padding: 0 5px;
+	text-align: left;
+	font-size: 12px;
+	position: relative;
+	border-top: 1px dashed #ffffff;
+}
