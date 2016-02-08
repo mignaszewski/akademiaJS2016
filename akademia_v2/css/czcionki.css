@@ -1,0 +1,131 @@
+body
+{
+	font-family: Verdana;
+	font-size: 20px;
+}
+
+#czas
+{
+	font-family: 'Handlee', cursive;
+	font-size: 10px;
+	letter-spacing: 2px;
+	text-align: right;
+}
+
+#stopka
+{
+	text-align: center;
+}
+
+#lewy
+{
+	font-size: 14px;
+	font-style: italic;
+	text-align: left;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+p
+{
+	font-size: 10px;
+	font-family: 'Handlee', cursive;
+	text-align: justify;
+	margin: 0;
+	margin-top: 5px;
+}
+
+.lista p
+{
+	font-size: 14px;
+	font-family: 'Handlee', cursive;
+	text-align: center;
+	margin: 0;
+	margin-top: 5px;
+}
+
+ol1 > li > ul p
+{
+	font-size: 12px;
+	font-family: 'Handlee', cursive;
+	text-align: justify;
+	margin: 0;
+	padding: 0 10px;
+}
+
+h1
+{
+	font-family: 'Handlee', cursive;
+	font-size: 20px;
+	letter-spacing: 2px;
+	line-height: 20px;
+	margin: 0;
+}
+
+ol1 > li > ul h1
+{
+	font-family: 'Handlee', cursive;
+	font-size: 20px;
+	letter-spacing: 2px;
+	line-height: 20px;
+	margin: 0;
+	padding: 10px;
+}
+
+h2
+{
+	font-family: 'Handlee', cursive;
+	font-size: 20px;
+	text-align: center;
+	color: #ff6624;
+	margin: 0;
+}
+
+h3
+{
+	margin: 20px;
+	font-family: Verdana;
+	font-size: 16px;
+	text-align: justify;
+}
+
+k
+{
+	font-size: 14px;
+}
+
+h4
+{
+	font-family: 'Handlee', cursive;
+	font-size: 14px;
+	letter-spacing: 2px;
+	text-align: center;
+}
+
+h5
+{	
+	font-family: 'Handlee', cursive;
+	font-size: 12px;
+	text-align: justify;
+	padding: 0 5px;
+	color: #ff6624;
+	margin: 0;
+}
+
+h6
+{
+	font-family: 'Handlee', cursive;
+	font-size: 12px;
+	letter-spacing: 2px;
+	text-align: right;
+}
+
+h7
+{
+	font-size: 16px;
+	font-style: italic;
+	text-align: left;
+}

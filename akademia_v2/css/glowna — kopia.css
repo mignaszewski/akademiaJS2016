@@ -1,0 +1,193 @@
+body
+{
+	margin: 0 !important;
+}
+
+#glowny
+{
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.naglowek
+{
+	width: 100%;
+}
+
+.przycisk
+{
+	float: left;
+	margin-top: 25px;
+	margin-left: 25px;
+}
+
+.szukaj
+{
+	float: left;
+	padding: 20px;
+}
+
+.pasek
+{
+	height: 31px;
+}
+
+.pasek2
+{
+	height: 31px;
+}
+
+.menu
+{
+	float: left;
+	width: 100%;
+	text-align: center;
+	min-height:80%;
+}
+
+.menu_min	/*responsywność*/
+{
+	margin: 15px 0;
+	padding: 15px;
+}
+
+#tresc
+{
+	min-height: 385px;
+	padding: 10px;
+}
+
+#stopka
+{
+	width: 100%;
+}
+
+ol
+{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-size: 16px;
+	height: 30px;
+	line-height: 200%;
+	/*display: inline-block;*/
+}
+
+ol a
+{
+	text-decoration: none;
+	display: block;
+}
+
+ol > li
+{
+	float: left;
+	width: 20%;
+	height: 30px;
+	border-right: 1px dashed #ffffff;
+	border-top: 1px dashed #ffffff;
+}
+
+/*ol > li:first-child
+{
+	border-left: 1px dashed #ffffff;
+}*/
+
+ol > li > ul
+{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-size: 16px;
+	height: 30px;
+	line-height: 200%; 
+	display: none;/* schowanie podmenu/potomków*/
+}
+
+/* aby było rowijane menu po jajechaniu kursorem na link */
+ol > li:hover > ul
+{
+	display: block; /* pokazuj podmenu/potomków jako element blokowy */
+}
+
+ol > li > ul a /* wygląd linków znajdujących się wewnąrz struktury ol */
+{
+	text-decoration: none;
+	display: block;
+}
+
+ol > li > ul > li /* stylizacja elementu li którego rodzicem jest ol */
+{
+	float: left;
+	width: 140px;
+	height: 30px;
+	padding: 0 5px;
+	text-align: left;
+	font-size: 12px;
+	position: relative;
+	border-top: 1px dashed #ffffff;
+}
+
+ol1
+{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-size: 16px;
+	height: 30px;
+	line-height: 200%;
+	/*display: inline-block;*/
+}
+
+ol1 a
+{
+	text-decoration: none;
+	display: block;
+}
+
+ol1 > li
+{
+	float: left;
+	width: 50px;
+	height: 50px;
+}
+
+/*ol1 > li:first-child
+{
+	border-left: 1px dashed #ffffff;
+}*/
+
+ol1 > li > ul
+{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-size: 16px;
+	height: 30px;
+	line-height: 200%; 
+	display: none;/* schowanie podmenu/potomków*/
+}
+
+/* aby było rowijane menu po jajechaniu kursorem na link */
+ol1 > li:hover > ul
+{
+	display: block; /* pokazuj podmenu/potomków jako element blokowy */
+}
+
+ol1 > li > ul a /* wygląd linków znajdujących się wewnąrz struktury ol */
+{
+	text-decoration: none;
+	display: block;
+}
+
+ol1 > li > ul > li /* stylizacja elementu li którego rodzicem jest ol */
+{
+	float: left;
+	width: 220px;
+	height: 30px;
+	padding: 0 5px;
+	text-align: left;
+	font-size: 12px;
+	position: relative;
+	border-top: 1px dashed #ffffff;
+}
