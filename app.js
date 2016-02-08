@@ -1,4 +1,30 @@
-var Store = angular.module("Store", ['ui.bootstrap']);
+var Store = angular.module("Store", ['ui.bootstrap', 'ngRoute']);
+
+Store.config(function($routeProvider){
+    $routeProvider
+
+        .when('/product', {
+            templateUrl: 'ProductPage.html',
+            controller: 'StoreController'
+        })
+
+});
+
+Store.directive('catResults', function(){
+    return{
+        restrict: 'E',
+        templateUrl: 'Bags.html'
+    };
+});
+
+
+Store.directive('cartResults', function(){
+    return{
+        restrict: 'E',
+        templateUrl: 'cart.html'
+    };
+});
+
 
 
 Store.controller('StoreController', ['$http', '$scope', function ($http, $scope) {
@@ -14,6 +40,7 @@ Store.controller('StoreController', ['$http', '$scope', function ($http, $scope)
     $scope.query = "";
 
     $scope.results = [];
+    $scope.haveResults = false;
     $scope.currentPage = 1
         , $scope.numPerPage = 10
         , $scope.total = 0,
@@ -213,8 +240,8 @@ Store.controller('StoreController', ['$http', '$scope', function ($http, $scope)
 
         if (!$scope.isLogged){
             alert("Dane nia sa prawidłowe!");
-        $scope.triesToLog = true;
-        $scope.action = true;}
+            $scope.triesToLog = true;
+            $scope.action = true;}
 
     };
 
@@ -244,12 +271,68 @@ Store.controller('StoreController', ['$http', '$scope', function ($http, $scope)
     //
     //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
+    $scope.cartItems = [];
+    $scope.totalPrice = 0;
+    $scope.items = $scope.cartItems.length;
+    $scope.displayItems = false;
+    $scope.catItems = []
 
-    $scope.products = []
+
 
     $scope.addToCart = function (product) {
-        products.push(product);
+
+        if (!$scope.isLogged)
+        {
+            alert("You have to login first!");
+            $scope.toLog();
+        }
+
+        var item = {
+            name: product.name,
+            id: product.id,
+            price: product.price,
+            img: product.img
+        }
+
+        $scope.cartItems.push(item);
+        console.log(item.name);
+        console.log($scope.cartItems.length);
+        $scope.items = $scope.cartItems.length;
+        $scope.totalPrice +=item.price;
     }
+
+    $scope.removeFromChart = function(product)
+    {
+        for (var i = 0; i < $scope.cartItems.length; i++){
+            if (product.id == $scope.cartItems[i].id){
+                console.log(product.id);
+                $scope.cartItems.splice(i, 1);
+                $scope.items = $scope.cartItems.length;
+            }
+        }
+    }
+
+
+    $scope.displayCategory = function(categoryName){
+        $scope.triesToLog = false;
+        $scope.action=true;
+        $scope.displayItems = true;
+        $scope.displayCart = false;
+        $http.get('categories.json').success(function(data){
+            //alternative version: $http.get('phones/' + $routeParams.phoneId + '.json'
+            $scope.catItems = data.products;
+        });
+
+        console.log($scope.catItems);
+    }
+    $scope.getCart = function(){
+        $scope.displayItems=false;
+        $scope.action=true;
+        $scope.displayCart = true;
+
+    }
+
+
 
 
 }]);
