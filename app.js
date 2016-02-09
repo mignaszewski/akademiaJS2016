@@ -8,12 +8,24 @@ Store.config(function($routeProvider){
             controller: 'StoreController'
         })
 
+        .when('/', {
+            templateUrl: 'home.html',
+            controller: 'StoreController'
+        })
+
 });
 
 Store.directive('catResults', function(){
     return{
         restrict: 'E',
         templateUrl: 'Bags.html'
+    };
+});
+
+Store.directive('googleResults', function(){
+    return{
+        restrict: 'E',
+        templateUrl: 'results.html'
     };
 });
 
@@ -24,6 +36,14 @@ Store.directive('cartResults', function(){
         templateUrl: 'cart.html'
     };
 });
+
+Store.directive('topNav', function() {
+    return{
+        restrict: 'E',
+        templateUrl: 'nav.html'
+    };
+});
+
 
 
 
@@ -227,7 +247,7 @@ Store.controller('StoreController', ['$http', '$scope', function ($http, $scope)
                 sessionStorage.setItem('isLogged', true);
 
                 alert("Logged as: " + $scope.uName);
-                //$scope.isLogged = true;
+
                 $scope.triesToLog = false;
                 $scope.action = false;
 
@@ -235,7 +255,7 @@ Store.controller('StoreController', ['$http', '$scope', function ($http, $scope)
                 $scope.isLogged = sessionStorage.getItem('isLogged');
             }
 
-        })
+        });
 
 
         if (!$scope.isLogged){
@@ -245,11 +265,6 @@ Store.controller('StoreController', ['$http', '$scope', function ($http, $scope)
 
     };
 
-    // Save data to sessionStorage
-
-
-// Get saved data from sessionStorage
-
 
     $scope.logout = function () {
         $scope.isLogged = false;
@@ -257,8 +272,22 @@ Store.controller('StoreController', ['$http', '$scope', function ($http, $scope)
 
         sessionStorage.setItem('userName', undefined);
         sessionStorage.setItem('isLogged', false);
-    }
+    };
 
+    // Save data to sessionStorage
+
+
+// Get saved data from sessionStorage
+
+
+
+
+    $scope.$watch('isLogged', function () {
+
+        $scope.uName = sessionStorage.getItem('userName');
+        $scope.isLogged = sessionStorage.getItem('isLogged');
+
+    });
 
     //
     //
@@ -298,7 +327,16 @@ Store.controller('StoreController', ['$http', '$scope', function ($http, $scope)
         console.log(item.name);
         console.log($scope.cartItems.length);
         $scope.items = $scope.cartItems.length;
-        $scope.totalPrice +=item.price;
+        $scope.totalPrice;
+
+        $scope.addThemAll = function() {
+            for (var i = 0; i < $scope.cartItems.length; i++) {
+                $scope.totalPrice = $scope.cartItems[i].price + $scope.totalPrice;
+                console.log($scope.cartItems[i].price);
+                console.log($scope.totalPrice);
+            }
+        }
+
     }
 
     $scope.removeFromChart = function(product)

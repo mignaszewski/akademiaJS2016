@@ -9,20 +9,9 @@ body, html {
     padding: 0;
 
 
-
-}
-
-#pName {
-    font-weight: 600;
-    color: #349688;
 }
 #searchSymbol {
     width: 30px;
-}
-
-#loginForm {
-    margin-top: 100px;
-    text-align: center;
 }
 #searchSymbol:hover {
     cursor: pointer; cursor: hand;
@@ -58,12 +47,17 @@ body, html {
     margin-top: 40px;
 }
 
+input.gsc-search-button {
+
+    display: inline-block;
+    border-radius: 0px;
+    height: 35px;
+    width: 50px;
+}
 
 * {
     box-sizing: border-box;
 }
-
-
 
 .last
 {
@@ -88,9 +82,6 @@ body, html {
     border-top: 1px solid#eee;
     border-bottom: 1px solid  #d2d2d2;
 }
-#results {
-    height: 200px;
-}
 
 .col-sm-6{
     margin: 10px;
@@ -109,7 +100,6 @@ img{
     max-width: 80%;
 }
 .container .row {
-    margin-top: 100px;
     margin-bottom: 30px;
     display: inline-block;
 }
@@ -119,7 +109,7 @@ img{
     border-top: 1px solid rgba(0,0,0,0.25);
     margin-top: 30px;
     left:0;
-    position:fixed;
+    position: fixed;
     bottom:0;
     width:100%;
     height:70px;   /* Height of the footer */
@@ -151,11 +141,6 @@ img{
     text-shadow: 0px 2px 2px #85f3ff;
 }
 
-.nav ul li a:hover {
-    color: #17ffa5;;
-    text-decoration: none;
-    text-shadow: 0px 2px 2px #85f3ff;
-}
 #f {
     width: 100%;
 }
@@ -187,9 +172,8 @@ a {
 .nav {
     margin-top: -44px;
     position: fixed;
-
+    z-index: 9999;
 }
-
 /* This is the desktop version!
 
 
@@ -271,45 +255,6 @@ a {
         text-decoration: none;
     }
 
-    ul li a:active {
-        color: #e888b5;
-        text-shadow: 0px 2px 2px #ff62af;
-        text-decoration: none;
-    }
-
-    #modal {
-        width: 100%;
-        height: 100%;
-        border-radius: 0px;
-    }
-
-    .modal-dialog {
-        width: 40%;
-        height: 25%;
-        border-radius: 0px;
-        background-color: #fff;
-    }
-
-    span {
-        color: #000
-    }
-
-    #x {
-        color: black;
-    }
-
-
-
-
-    .input label {
-        position: absolute;
-        top: 10px;
-        left: 0;
-        z-index: 2;
-        cursor: pointer;
-        line-height: 60px;
-    }
-
     .nav {
 
         width: 100%;
@@ -321,7 +266,7 @@ a {
     .nav {
         margin-top: -52px;
         position: fixed;
-        /*z-index: 9999;*/
+        z-index: 9999;
     }
 
     .navbar {
@@ -348,7 +293,7 @@ a {
     }
 
     .logo {
-        width: 10%;
+        width: 15%;
         margin-right: 40px;
     }
 
@@ -386,28 +331,6 @@ a {
         color: #cccccc;
     }
 }
-
-
-button {
-    background-color: #46C9B6;
-    color: #fff;
-    padding: 10px 10px 5px 10px;
-    margin-top: 20px;
-    text-align: center;
-}
-#sbmbtn {color: #fff;
-border: none;
-padding: 10px 20px 10px 20px;
-}
-
-#sbmbtn:hover{
-    color: #fff;
-    border: none;
-    padding: 10px 20px 10px 20px;
-    background-color: #349688;
-}
-
-
 /* This is the end of desktop version!
 
 
@@ -450,19 +373,13 @@ padding: 10px 20px 10px 20px;
         display: inline-block;
     }
     .navbar .navbar-header ul li a{
-        color: #000;
-        text-decoration: none;
-        font: 20px Raleway;
-        margin: 0px 10px;
-        padding: 10px 10px;
-        position: relative;
-        z-index: 0;
-        cursor: pointer;
+        display: inline-block;
+        color: #454745;
+        margin-right: -20px;
     }
+    form {
 
-
-
-
+    }
     .logo {
         width: 100%;
         display: block;
