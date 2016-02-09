@@ -11,7 +11,8 @@
                     <a class="btn-buy" ng-click="removeFromChart(product)" href="#">Remove {{product.name}}</a>        <br>
                     <h5> {{product.price ||currency }}</h5></div>
             </div>
-            <button type="submit"> Buy </button>
+            <h3> {{totalPrice}}</h3>
+            <button ng-click="addThemAll()" type="submit"> Buy </button>
         </div>
     </div>
 

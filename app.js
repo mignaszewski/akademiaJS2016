@@ -3,15 +3,17 @@ var Store = angular.module("Store", ['ui.bootstrap', 'ngRoute']);
 Store.config(function($routeProvider){
     $routeProvider
 
+        .when('/', {
+            templateUrl: 'home.html',
+            controller: 'StoreController'
+        })
+
         .when('/product', {
             templateUrl: 'ProductPage.html',
             controller: 'StoreController'
         })
 
-        .when('/', {
-            templateUrl: 'home.html',
-            controller: 'StoreController'
-        })
+
 
 });
 
@@ -187,7 +189,7 @@ Store.controller('StoreController', ['$http', '$scope', function ($http, $scope)
     //
     // *****
 
-    $scope.isLogged = false;   //to show "login" button
+    $scope.isLogged = undefined;   //to show "login" button
     $scope.uName = ''; //to store the name in the field
 
 
@@ -223,15 +225,18 @@ Store.controller('StoreController', ['$http', '$scope', function ($http, $scope)
         }
     ];
 
+    $scope.uName = sessionStorage.getItem('userName');
+    $scope.isLogged = sessionStorage.getItem('isLogged');
+
     $scope.username = '';
     $scope.password = '';
 
-    $scope.uName = sessionStorage.getItem('userName');
-    $scope.isLogged = sessionStorage.getItem('isLogged');
+
 
     $scope.toLog = function () {
         $scope.action = true;
         $scope.triesToLog = true;
+        console.log('hi');
     }
 
 
@@ -243,7 +248,7 @@ Store.controller('StoreController', ['$http', '$scope', function ($http, $scope)
         $scope.users.forEach(function (credentials) {
             if (credentials.login == login && pass + credentials.salt== credentials.psalt) {
                 $scope.uName = credentials.name;
-                sessionStorage.setItem('userName', $scope.uName);
+                sessionStorage.setItem('userName', credentials.name);
                 sessionStorage.setItem('isLogged', true);
 
                 alert("Logged as: " + $scope.uName);
@@ -279,15 +284,6 @@ Store.controller('StoreController', ['$http', '$scope', function ($http, $scope)
 
 // Get saved data from sessionStorage
 
-
-
-
-    $scope.$watch('isLogged', function () {
-
-        $scope.uName = sessionStorage.getItem('userName');
-        $scope.isLogged = sessionStorage.getItem('isLogged');
-
-    });
 
     //
     //
@@ -362,6 +358,7 @@ Store.controller('StoreController', ['$http', '$scope', function ($http, $scope)
         });
 
         console.log($scope.catItems);
+        console.log($scope.displayItems);
     }
     $scope.getCart = function(){
         $scope.displayItems=false;
@@ -374,6 +371,29 @@ Store.controller('StoreController', ['$http', '$scope', function ($http, $scope)
 
 
 }]);
+
+Store.service('LogService', function(){
+    var isInside = false;
+    var uname = '';
+    return {
+
+        loggedIn: function(){
+            isInside = true;
+            return isInside;
+        },
+
+
+        loggedOut: function(){
+            isInside = false;
+            return isInside;
+        },
+
+        ifLogged: function(){
+            return isInside;
+        }
+
+    };
+});
 
 
 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html ng-app="Store" ng-strict-di >
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="myCSS.css">
+    <link rel="stylesheet" href="reset.css">
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="angular-route.js"></script>
+    <script data-require="angular-ui-bootstrap@0.3.0" data-semver="0.3.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.3.0.min.js"></script>
+
+
+    <link href="http://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <script src="app.js"></script>
+
+    <title>Asos</title>
+
+</head>
+
+
+    <body>
+        <div class="main">
+
+            <div ng-view></div>
+
+            <google-results></google-results>
+
+            <div id="f" >
+                <div class="footer">
+                    <p> &copy Asos 2016</p> <a href="#">Terms of use </a>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

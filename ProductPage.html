@@ -1,26 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-<body ng-app="Store" ng-controller="StoreController">
-<meta charset="UTF-8">
-<link rel="stylesheet" href="ProductCSS.css">
-<script type="text/javascript" src="angular.min.js"></script>
-<script type="text/javascript" src="angular-route.js"></script>
-<script data-require="angular-ui-bootstrap@0.3.0" data-semver="0.3.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.3.0.min.js"></script>
-
-
-<link href="http://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<!-- Place favicon.ico in the root directory -->
-
-
-
-<script type="text/javascript" src="app.js"></script>
-
-<title>Asos</title>
-</head>
 
 
 <div class="navbar">
@@ -60,10 +38,22 @@
         <li><a href="#">Accesories</a></li>
         <li><a href="#">Outwear</a></li>
         <li><a href="#">Knitwear</a></li>
-        <li><a href="#">Bags</a></li>
+        <li><a ng-click="displayCategory()" href="#">Bags</a></li>
         <li><a href="#" class="last">Shoes</a></li>
     </ul>
 </div>
+
+<script type="text/ng-template" id="myModalContent.html">
+    <div>default modal content</div>
+    <div>But scope is accessable here: {title} = {{title}}</div>
+    <div>But methods are here to: ok(); =
+        <button type="button" class="btn btn-primary" ng-click="ok($event)">ok($event)</button></div>
+</script>
+
+<button class="btn btn-default" ng-click="open()">Open me!</button>
+
+
+
 
 <div ng-hide="action" class="fluid-container">
     <div class="container">
@@ -176,20 +166,10 @@
     </div>
 
 
-    <section class="itemsInCart" >
+    <section ng-show="displayCart" class="itemsInCart" >
 
             <h2> Currently {{items}} in cart.</h2>
 
 
     </section>
 
-    <div id="f" class="container">
-        <div class="footer">
-            <p> &copy Asos 2016</p>
-        </div>
-    </div>
-
-</div>
-</body>
-
-</html>
