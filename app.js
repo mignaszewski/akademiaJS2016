@@ -1,5 +1,8 @@
 var Store = angular.module("Store", ['ui.bootstrap', 'ngRoute']);
 
+
+
+
 Store.config(function($routeProvider){
     $routeProvider
 
@@ -49,7 +52,9 @@ Store.directive('topNav', function() {
 
 
 
-Store.controller('StoreController', ['$http', '$scope', function ($http, $scope) {
+Store.controller('StoreController', ['$http', '$scope', 'shareDataService', function ($http, $scope, shareDataService) {
+
+
 
     //     ** *** **
     //
@@ -323,6 +328,8 @@ Store.controller('StoreController', ['$http', '$scope', function ($http, $scope)
         console.log(item.name);
         console.log($scope.cartItems.length);
         $scope.items = $scope.cartItems.length;
+
+        shareDataService.addItems($scope.cartItems.length);
         $scope.totalPrice;
 
         $scope.addThemAll = function() {
@@ -344,7 +351,9 @@ Store.controller('StoreController', ['$http', '$scope', function ($http, $scope)
                 $scope.items = $scope.cartItems.length;
             }
         }
-    }
+    };
+
+
 
 
     $scope.displayCategory = function(categoryName){
@@ -393,6 +402,58 @@ Store.service('LogService', function(){
         }
 
     };
+});
+
+Store.directive('modalDialog', function() {
+    return {
+        restrict: 'E',
+        scope: {
+            show: '='
+        },
+        replace: true, // Replace with the template below
+        transclude: true, // we want to insert custom content inside the directive
+        link: function(scope, element, attrs) {
+            scope.dialogStyle = {};
+            if (attrs.width)
+                scope.dialogStyle.width = attrs.width;
+            if (attrs.height)
+                scope.dialogStyle.height = attrs.height;
+            scope.hideModal = function() {
+                scope.show = false;
+            };
+        },
+        template: "<div class='ng-modal' ng-show='show'><div class='ng-modal-overlay' ng-click='hideModal()'></div><div class='ng-modal-dialog' ng-style='dialogStyle'><div class='ng-modal-close' ng-click='hideModal()'>X</div><div class='ng-modal-dialog-content' ng-transclude></div></div></div>"
+    };
+});
+
+Store.controller('MyCtrl', ['$scope', 'shareDataService', function($scope, shareDataService) {
+
+    $scope.itemsArray = shareDataService.getItems();
+
+    $scope.modalShown = false;
+
+    $scope.toggleModal = function() {
+        $scope.modalShown = !$scope.modalShown;
+    };
+}]);
+
+
+Store.service('shareDataService', function() {
+    var myItems = [];
+
+    var addItems = function(newObj) {
+        myItems.push(newObj);
+    }
+
+    var getItems = function(){
+        return myItems;
+    }
+
+    return {
+        addItems: addItems,
+       getItems: getItems
+    };
+
 });
 
 
