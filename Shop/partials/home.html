@@ -1,0 +1,96 @@
+<top-nav> </top-nav>
+
+<div class="nav">
+    <ul>
+        <li ng-click="displayCategory()"><a href="#/">Accesories</a></li>
+        <li><a href="#">Outwear</a></li>
+        <li><a href="#">Knitwear</a></li>
+        <li><a href="#">Bags</a></li>
+        <li><a href="#" class="last">Shoes</a></li>
+    </ul>
+</div>
+
+
+<div ng-show="triesToLog"  class ="container">
+    <section>
+        <form>
+            <label for="username">Username:</label> <br> <br>
+            <input type="text" id="username" ng-model="username" > <br> <br>
+            <label for="password">Password:</label> <br> <br>
+            <input type="password" id="password" ng-model="password"> <br> <br>
+            <button type="submit" ng-click="login()">Login</button> <br> <br>
+        </form>
+    </section>
+</div>
+
+<cat-results ng-show="displayItems"></cat-results>
+<cart-results ng-show="displayCart"></cart-results>
+
+
+<div class="container container-fluid" ng-show="haveResults" > <!--Div outputting results-->
+    <h1>Results</h1>
+    <h3>{{numPages()}} remain</h3>
+    <ul>
+        <div class="row" >
+            <div class="col-md-3" id="results" ng-repeat="item in results">
+                <img id="imgResult" class="object-fit-contain" ng-src="{{item.image.thumbnailLink}}">
+            </div>
+        </div>
+    </ul>
+    <div id="pagi" ng-show="haveResults" data-pagination="" data-num-pages="numPages()"
+         data-current-page="currentPage" data-max-size="maxSize"
+         data-boundary-links="true"></div>
+</div>
+
+
+<div class="main">
+
+
+    <div ng-hide="action" class="container">  <!-- COntainer with news, displayed on a main page-->
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <h1 id="title">November 2017</h1>
+            <div class="col-md-3 col-md-offset-9">
+                <p> We're opening a new shop on 27th of November, special prices and celebrities, you have to be
+                    there</p>
+            </div>
+            <ol>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+            </ol>
+        </div>
+    </div>
+    <div ng-hide="haveResults" class="container-fluid">
+        <div ng-hide="action" class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6 col-md-3 ">
+                        <a href="#"><img class="img-thumbnail"
+                                         src="http://data.whicdn.com/images/219209312/large.jpg"></a>
+                        <a href="#">Add to cart</a>        <br>
+                        <h5> 13€</h5></div>
+
+                    <div class="col-xs-6 col-md-3">
+                        <a href="#"><img class="img-thumbnail"
+                                         src="https://45.media.tumblr.com/481d66b82e6f8f2c7bac94915b08251b/tumblr_mmhchkGWpd1sotab9o1_400.gif"></a>
+                        <a href="#">Add to cart</a>  <br>
+                        <h5> 199€</h5></div>
+
+                    <div class="col-xs-6 col-md-3">
+                        <a href="#"><img class="img-thumbnail" src="http://data.whicdn.com/images/219220442/large.jpg"></a>
+                        <a href="#">Add to cart</a> <br>
+                        <h5> 111€</h5></div>
+
+                    <div class="col-xs-6 col-md-3">
+                        <a href="#"><img class="img-thumbnail" src="http://data.whicdn.com/images/219214384/large.jpg"></a>
+                        <a href="#">Add to cart </a>   <br>
+                        <h5> 188€</h5></div>
+
+                </div>
+            </div>
+        </div>
+</div>
+    </div>
+
+
+

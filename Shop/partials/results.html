@@ -1,0 +1,17 @@
+
+<div class="container container-fluid" ng-show="haveResults" > <!--Div outputting results-->
+    <h1>Results</h1>
+    <h3>{{numPages()}} remain</h3>
+    <ul>
+        <div class="row" >
+            <div class="col-md-3" id="results" ng-repeat="item in results">
+                <img id="imgResult" class="object-fit-contain" ng-src="{{item.image.thumbnailLink}}">
+            </div>
+        </div>
+    </ul>
+    <div id="pagi" ng-show="haveResults" data-pagination="" data-num-pages="numPages()"
+         data-current-page="currentPage" data-max-size="maxSize"
+         data-boundary-links="true">
+
+    </div>
+</div>

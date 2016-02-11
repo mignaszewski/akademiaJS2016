@@ -1,0 +1,26 @@
+<!-- jQuery //I'm using it to fadin' pictures in my modal -->
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<button class="btn" id="btn0" onclick="toggle_visibility('popup-box1');">
+    Zobacz nasze najnowsze promocje!
+</button>
+
+<div id="popup-box1" class="popup-position" onclick="toggle_visibility('popup-box1');" onload="changePicture();">
+    <div id="popup-wrapper" onclick="toggle_visibility('popup-box1');">
+        <div id="popup-container">
+            <h3>Tylko teraz!</h3>
+            <h4>Kup dwa produkty z tej samej kategorii, a trzeci dostaniesz gratis!</h4>
+            <h5>Sprawdź już teraz, przejdź do strony kategorii:</h5>
+
+            <i id="ptr-left" onclick="previousPicture()" class="fa fa-reply"></i>
+            <div id="slider">	</div>
+            <i id="ptr-right" onclick="nextPicture()" class="fa fa-share"></i>
+
+            <a href="category#">
+                <span></br> Do strony kategorii</span>
+                <i class="fa fa-long-arrow-right"></i>
+            </a>
+            <div id="closing_x" onclick="toggle_visibility('popup-box1');"><i class="fa fa-times"></i></div>
+        </div>
+    </div>
+</div>
