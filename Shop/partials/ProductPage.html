@@ -43,15 +43,6 @@
     </ul>
 </div>
 
-<script type="text/ng-template" id="myModalContent.html">
-    <div>default modal content</div>
-    <div>But scope is accessable here: {title} = {{title}}</div>
-    <div>But methods are here to: ok(); =
-        <button type="button" class="btn btn-primary" ng-click="ok($event)">ok($event)</button></div>
-</script>
-
-<button class="btn btn-default" ng-click="open()">Open me!</button>
-
 
 
 
@@ -70,9 +61,9 @@
                 <a href="#"><img
                     ng-src="{{gallery[current]}}"></a>
                 <ul ng-repeat="num in myArr ">
-                    <li> <a ng-click="toggle(num - 1)" href="#"> {{num}} . </a></li>
+                    <li> <a ng-click="toggle(num - 1)" href="#/product"> {{num}} . </a></li>
                 </ul>
-            </div>
+            </div> <br> <br> <br>
 
                     <div id="second" class="col-md-6 col-sm-12 col-xs-12">
                         <div class="col-md-6 col-sm-12 col-xs-3">
@@ -101,18 +92,8 @@
 
                         </div>
                     </div>
-
-
-
         </div>
     </div>
-
-
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <p> A long OPTIONAL description about the choosen product you can buy it in the price of...
-            bla bla bla</p>
-    </div><!-- DESCRIPTON-->
-
 
 
 

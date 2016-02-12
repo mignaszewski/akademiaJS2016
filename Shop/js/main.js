@@ -1,6 +1,4 @@
-﻿var Store = angular.module("Store", ['ui.bootstrap', 'ngRoute']);
-
-
+﻿var Store = angular.module("Store", ['ui.bootstrap', 'ngRoute', 'angular-carousel']);
 
 
 Store.config(['$routeProvider', function($routeProvider){
@@ -10,6 +8,10 @@ Store.config(['$routeProvider', function($routeProvider){
 
         .when('/', {
             templateUrl: './partials/home.html',
+            controller: 'StoreController'
+        })
+        .when('/carousel', {
+            templateUrl: './partials/carousel.html',
             controller: 'StoreController'
         })
 
@@ -51,8 +53,42 @@ Store.directive('topNav', function() {
     };
 });
 
+Store.directive('ngCarousel', function() {
+    return function(scope, element, attrs) {
+        var el = element[0];
+        var containerEl = el.querySelector("ul");
+        var slidesEl = containerEl.querySelectorAll("li");
+        scope.numSlides = slidesEl.length;
+        scope.curSilde = 1;
+        scope.$watch('curSlide', function(num) {
+            containerEl.style.left = (-1*100*(num-1)) + '%';
+        });
 
+        el.style.position = 'relative';
+        el.style.overflow = 'hidden';
 
+        containerEl.style.position = 'absolute';
+        containerEl.style.width = (scope.numSlides*100)+'%';
+        containerEl.style.listStyleType = 'none';
+        containerEl.style.margin =0;
+        containerEl.style.padding=0;
+        containerEl.style.transition = '1s';
+
+        for(var i=0; i<slidesEl.length; i++) {
+            var slideEl = slidesEl[i];
+            slideEl.style.display = 'inline-block';
+            slideEl.style.width = (100/scope.numSlides) + '%';
+        }
+    };
+});
+
+Store.directive('newsPage', function() {
+    return{
+        restrict: 'E',
+        templateUrl: './partials/carousel.html'
+
+    };
+});
 
 Store.controller('StoreController', ['$http', '$scope', 'shareDataService', function ($http, $scope, shareDataService) {
 
@@ -114,8 +150,10 @@ Store.controller('StoreController', ['$http', '$scope', 'shareDataService', func
     //     ** *** **
 
 
-    $scope.gallery = ['first.jpg', 'second.jpg', 'third.jpg'];
-    $scope.items = 3;
+
+
+    $scope.gallery = ['img/first.jpg', 'img/second.jpg', 'img/third.jpg'];
+    $scope.news = ['img/fashion1.jpg', 'img/fashion2.jpg', 'http://i.huffpost.com/gen/1703513/images/o-LOS-ANGELES-facebook.jpg'];
     $scope.current = 'second.jpg'; //the initial picture
     $scope.myArr = [1, 2, 3];
 
@@ -306,16 +344,19 @@ Store.controller('StoreController', ['$http', '$scope', 'shareDataService', func
 
     $scope.cartItems = [];
     $scope.totalPrice = 0;
-    $scope.items = $scope.cartItems.length;
+    $scope.itemsAmount = 0;
+    $scope.items = 0;
     $scope.displayItems = false;
     $scope.catItems = [];
+    $scope.myInterval = 3000;
 
 
 
     $scope.addToCart = function (product) {
 
-        if (!$scope.isLogged)
-        {
+        $scope.itemsAmount +=1;
+
+        if (!$scope.isLogged) {
             alert("You have to login first!");
             $scope.toLog();
         }
@@ -324,24 +365,51 @@ Store.controller('StoreController', ['$http', '$scope', 'shareDataService', func
             name: product.name,
             id: product.id,
             price: product.price,
-            img: product.img
+            img: product.img,
+            amount : 0
         };
 
-        $scope.cartItems.push(item);
-        console.log(item.name);
-        console.log($scope.cartItems.length);
-        $scope.items = $scope.cartItems.length;
+        Math.decimal = function (n, k) {
+            var factor = Math.pow(10, k + 1);
+            n = Math.round(Math.round(n * factor) / 10);
+            return n / (factor / 10);
+        };
 
-        shareDataService.addItems($scope.cartItems.length);
-        $scope.totalPrice = 0;
+        var inCart = $scope.cartItems.filter(function (item) {
+            return item.id === product.id;
+        });
+
+        if (!!inCart.length) {
+            var index;
+
+            $scope.cartItems.forEach(function (el, i) {
+                if (el.id === product.id) {
+                    index = i;
+                }
+            });
+            $scope.cartItems[index].amount += 1;
+        }
+        else {
+            product.amount = 1;
+            $scope.cartItems.push(product);
+        }
+
+
 
         $scope.addThemAll = function() {
             for (var i = 0; i < $scope.cartItems.length; i++) {
-                $scope.totalPrice = $scope.cartItems[i].price + $scope.totalPrice;
+                var price = $scope.cartItems[i].amount * $scope.cartItems[i].price;
+                $scope.totalPrice += price;
+                $scope.totalPrice = Math.decimal($scope.totalPrice, 2);
                 console.log($scope.cartItems[i].price);
-                console.log($scope.totalPrice);
+                console.log($scope.itemsAmount);
             }
         };
+
+
+
+
+            $scope.itemsAmount +=  $scope.cartItems[i].amount;
 
     };
 
@@ -349,11 +417,19 @@ Store.controller('StoreController', ['$http', '$scope', 'shareDataService', func
     {
         for (var i = 0; i < $scope.cartItems.length; i++){
             if (product.id == $scope.cartItems[i].id){
-                console.log(product.id);
-                $scope.cartItems.splice(i, 1);
-                $scope.items = $scope.cartItems.length;
+                if ($scope.cartItems[i].amount > 1){
+                    $scope.cartItems[i].amount -= 1;
+                    $scope.itemsAmount -= 1;}
+                else {
+                    $scope.cartItems.splice(i, 1);
+                }
             }
         }
+
+
+
+
+
     };
 
 
@@ -459,6 +535,7 @@ Store.service('shareDataService', function() {
     };
 
 });
+
 
 
 

@@ -1,0 +1,24 @@
+
+<!--<a href="#"><img-->
+        <!--ng-src="{{gallery[current]}}"></a>-->
+<!--<ul ng-repeat="num in myArr ">-->
+    <!--<li> <a ng-click="toggle(num - 1)" href="#/product"> {{num}} . </a></li>-->
+<!--</ul>-->
+
+
+
+<div ng-hide="action" class="container" ng-init="current=0">  <!-- COntainer with news, displayed on a main page-->
+    <div class="col-md-12 col-sm-12 col-xs-12" style="background: url({{news[current]}})no-repeat center center;">
+        <h1 id="title">November 2017</h1>
+        <div class="col-md-3 col-md-offset-9">
+            <p> We're opening a new shop on 27th of November, special prices and celebrities, you have to be
+                there</p>
+        </div>
+        <br> <br><br>
+        <ol>
+            <li><a ng-click="toggle(2)" class="button" href="#/">1</a></li>
+            <li><a ng-click="toggle(1)" class="button" href="#/">2</a></li>
+            <li><a ng-click="toggle(0)" class="button" href="#/">3</a></li>
+        </ol>
+    </div>
+</div>

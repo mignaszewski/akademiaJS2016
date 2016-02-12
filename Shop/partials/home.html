@@ -3,7 +3,7 @@
 <div class="nav">
     <ul>
         <li ng-click="displayCategory()"><a href="#/">Accesories</a></li>
-        <li><a href="#">Outwear</a></li>
+        <li><a href="#/carousel.html">Outwear</a></li>
         <li><a href="#">Knitwear</a></li>
         <li><a href="#">Bags</a></li>
         <li><a href="#" class="last">Shoes</a></li>
@@ -42,24 +42,44 @@
          data-boundary-links="true"></div>
 </div>
 
+<news-page> </news-page>
 
-<div class="main">
 
 
-    <div ng-hide="action" class="container">  <!-- COntainer with news, displayed on a main page-->
-        <div class="col-md-12 col-sm-12 col-xs-12">
-            <h1 id="title">November 2017</h1>
-            <div class="col-md-3 col-md-offset-9">
-                <p> We're opening a new shop on 27th of November, special prices and celebrities, you have to be
-                    there</p>
-            </div>
-            <ol>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-            </ol>
-        </div>
-    </div>
+    <!--<div ng-hide="action" class="container">  &lt;!&ndash; COntainer with news, displayed on a main page&ndash;&gt;-->
+        <!--<div class="col-md-12 col-sm-12 col-xs-12">-->
+            <!--<h1 id="title">November 2017</h1>-->
+            <!--<div class="col-md-3 col-md-offset-9">-->
+                <!--<p> We're opening a new shop on 27th of November, special prices and celebrities, you have to be-->
+                    <!--there</p>-->
+            <!--</div>-->
+            <!--<br> <br><br>-->
+            <!--<ol>-->
+                <!--<li><a class="button" href="#">1</a></li>-->
+                <!--<li><a class="button" href="#">2</a></li>-->
+                <!--<li><a class="button" href="#">3</a></li>-->
+            <!--</ol>-->
+        <!--</div>-->
+        <!--</div>-->
+
+
+        <!--<section id="carousel" ng-carousel-->
+                 <!--ng-init="curSlide=1; numSlides=6"-->
+                 <!--ng-swipe-right="curSlide=curSlide-1"-->
+                 <!--ng-swipe-left="curSlide=curSlide+1">-->
+
+            <!--<ul>-->
+                <!--<li><img src="./img/fashion1.jpg" />-->
+                <!--<li><img src="./img/fashion2.jpg" />-->
+            <!--</ul>-->
+
+            <!--<div id="prev-button" ng-hide="curSlide==1"-->
+                 <!--ng-click="curSlide=curSlide-1"> &lt; </div>-->
+
+            <!--<div id="next-button" ng-hide="curSlide==numSlides"-->
+                 <!--ng-click="curSlide=curSlide+1">&gt; </div>-->
+        <!--</section>-->
+
     <div ng-hide="haveResults" class="container-fluid">
         <div ng-hide="action" class="container-fluid">
             <div class="container">
@@ -89,8 +109,7 @@
                 </div>
             </div>
         </div>
-</div>
-    </div>
+</div></div>
 
 
 

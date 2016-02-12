@@ -37,6 +37,11 @@ gulp.task('minify-js', function() {   //minifies js giles
     }))
     .pipe(gulp.dest('./dist/'))
 });
+gulp.task('copy', function(){
+
+  gulp.src("*.json")
+      .pipe(gulp.dest("./dist"));
+});
 gulp.task('copy-bower-components', function () {  //copies front end depedencies
   gulp.src('./Shop/bower_components/**')
     .pipe(gulp.dest('dist/bower_components/'));
@@ -74,6 +79,6 @@ gulp.task('default',
 gulp.task('build', function() { //cmd: gulp build, creates a final build meant to be pushed to server
   runSequence(
     ['clean'],
-    ['clean' , 'lint', 'minify-css', 'minify-js', 'copy-html-files', 'copy-bower-components', 'connectDist', 'images']
+    ['clean' , 'lint', 'minify-css', 'minify-js', 'copy-html-files','copy' , 'copy-bower-components', 'connectDist', 'images']
   );
 });

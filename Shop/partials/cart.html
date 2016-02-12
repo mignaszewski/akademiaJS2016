@@ -6,13 +6,26 @@
             <div class="row">
                 <div ng-repeat="product in cartItems" class="col-xs-6 col-md-4 ">
                     <a href="#"><img class="img-thumbnail" ng-src={{product.img}}></a>
-                    <p id="pName">{{product.name}}</p>
+                    <h6 id="pName">{{product.name}}</h6>
+                    <h6>Amount: {{product.amount}}</h6>
                     <a class="btn-buy" ng-click="addToCart(product)" href="#/">Buy {{product.name}}</a>        <br>
                     <a class="btn-buy" ng-click="removeFromChart(product)" href="#/">Remove {{product.name}}</a>        <br>
                     <h5> {{product.price ||currency }}</h5></div>
             </div>
             <h3> {{totalPrice}}</h3>
             <button ng-click="addThemAll()" type="submit"> Buy </button>
+
+            <div ng-controller='MyCtrl'>
+                <button ng-click='toggleModal()'>Open Modal Dialog</button>
+                <modal-dialog show='modalShown' width='400px' height='60%'>
+                    <h5> You are going to buy :</h5>
+                    <div ng-repeat="item in itemsArray">
+                    <h6> {{item.name}}</h6>
+                    <h4> {{item.price}}</h4>
+                </div>
+                    <h3><strong> Total: {{ totalPrice}} </strong></h3>
+                </modal-dialog>
+            </div>
         </div>
     </div>
 
