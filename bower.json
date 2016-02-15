@@ -7,12 +7,25 @@
   ],
   "license": "ISC",
   "moduleType": [],
-  "homepage": "",
+  "homepage": "https://github.com/mignaszewski/akademiaJS2016",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "keywords": [
+    "Store"
+  ],
+  "private": true,
+  "dependencies": {
+    "angular-bootstrap": "^1.1.2",
+    "angular-animate": "^1.5.0",
+    "angular-route": "^1.5.0",
+    "angular-carousel": "^1.0.1",
+    "angular": "^1.5.0",
+    "animate.css": "^3.5.1",
+    "bootstrap": "^3.3.6"
+  }
 }
