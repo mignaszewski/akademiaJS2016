@@ -1,3 +1,15 @@
+<?php
+	session_start();
+	
+	require_once "sql.php"; // wkleja kod z pliku sql.php 
+	$polaczenie = @new mysqli($host, $db_user, $db_password, $db_name);
+	
+	if(isset($_SESSION['id']))
+		$id_login = $_SESSION['id'];
+	else
+		$id_login = 0;
+?>
+
 <!DOCTYPE HTML>
 
 <html lang = "pl">
@@ -8,7 +20,7 @@
 		?>
 	</head>
 	
-	<body>
+	<body ng-app="sklep">
 		<div id = "glowny">
 			<div class = "naglowek">
 				<?php
@@ -17,37 +29,8 @@
 			</div>
 			
 			<div id = "tresc">
-				<div class = "pole_prawe">
-					<a href = "#">
-						<div class = "zdjecie">
-							<img src="chomik.jpg" width="100" height = "100"/>
-						</div>
-					</a>
-					<div class = "opis">
-						<a href = "nazwa.php">
-							<h1>nazwa</h1>
-						</a>
-						<p>opis opis opis opis opis opis opis opis opis opis opis opis</p>
-					</div>
-					<div class = "dodaj">
-						<h2>00,00zł</h2>
-						<form>
-							licznik
-							<br/>
-							<input type = "submit" name = "do koszyka" value = "dodaj" class = "submit"/>
-						</form>
-					</div>
-					<div style = "clear:both"></div>
-				</div>
-				<div class = "pole_lewe">
-					<div class = "zdjecie"><img src="chomik.jpg" width="100" height = "100"/></div>
-					<div class = "opis">opis</div>
-					<div class = "dodaj">dodaj</div>
-					<div style = "clear:both"></div>
-				</div>
-				<div style = "clear:both"></div>
+				<div ng-view></div>
 			</div>
-			
 			<div id = "stopka">
 				<?php
 					require_once "stopka.php";

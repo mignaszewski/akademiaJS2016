@@ -5,9 +5,6 @@ body
 
 #glowny
 {
-	min-width: 480px;	/*responsywność*/
-	max-width: 1600px;	/*responsywność*/
-	width: 1000px;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -17,19 +14,20 @@ body
 	width: 100%;
 }
 
-.przycisk
+k1, k2
 {
-	float: left;
-	width: 50px;
-	height: 50px;
-	margin-top: 25px;
-	margin-left: 25px;
+	cursor: pointer;
 }
 
-#szukaj
+.przycisk
+{
+	margin-top: 20px;
+	text-align: center;
+}
+
+.szukaj
 {
 	float: left;
-	width: 535px;
 	padding: 20px;
 }
 
@@ -63,9 +61,29 @@ body
 	padding: 10px;
 }
 
+.sticky_top
+{
+	margin-right: auto;
+	margin-left: auto;
+	position: fixed; /* fixed - stała, przyklejone */
+	left: auto;
+	top: 0;
+	z-index: 100; /* głębia, zasłanianie się. Im ma większe tym więcej zasłania */
+}
+
 #stopka
 {
 	width: 100%;
+}
+
+.sticky_bottom
+{
+	margin-right: auto;
+	margin-left: auto;
+	position: fixed; /* fixed - stała, przyklejone */
+	left: auto;
+	bottom: 0;
+	z-index: 100; /* głębia, zasłanianie się. Im ma większe tym więcej zasłania */
 }
 
 ol
@@ -87,17 +105,17 @@ ol a
 
 ol > li
 {
-	float: left;
-	width: 20%;
+	float: right;
 	height: 30px;
-	border-right: 1px dashed #ffffff;
-	border-top: 1px dashed #ffffff;
+	padding: 0 20px;
+	/*border-right: 1px dotted #ffffff;
+	border-top: 1px dotted #ffffff;*/
 }
 
-/*ol > li:first-child
+ol > li:first-child
 {
-	border-left: 1px dashed #ffffff;
-}*/
+	/*border-left: 1px dotted #ffffff;*/
+}
 
 ol > li > ul
 {
@@ -124,14 +142,13 @@ ol > li > ul a /* wygląd linków znajdujących się wewnąrz struktury ol */
 
 ol > li > ul > li /* stylizacja elementu li którego rodzicem jest ol */
 {
-	float: left;
+	float: right;
 	width: 140px;
-	height: 30px;
 	padding: 0 5px;
 	text-align: left;
 	font-size: 12px;
 	position: relative;
-	border-top: 1px dashed #ffffff;
+	/*border-top: 1px dotted #ffffff;*/
 }
 
 ol1
@@ -140,7 +157,6 @@ ol1
 	margin: 0;
 	list-style-type: none;
 	font-size: 16px;
-	height: 30px;
 	line-height: 200%;
 	/*display: inline-block;*/
 }
@@ -171,8 +187,11 @@ ol1 > li > ul
 	font-size: 16px;
 	height: 30px;
 	line-height: 200%; 
-	display: none;/* schowanie podmenu/potomków*/
+	/*display: none;/* schowanie podmenu/potomków*/
+	position: absolute; /*pozysja ustalona*/
+	right: 0; /*wyrównanie do prawej rozwijanego elementu*/
 }
+
 
 /* aby było rowijane menu po jajechaniu kursorem na link */
 ol1 > li:hover > ul
@@ -180,20 +199,56 @@ ol1 > li:hover > ul
 	display: block; /* pokazuj podmenu/potomków jako element blokowy */
 }
 
-ol1 > li > ul a /* wygląd linków znajdujących się wewnąrz struktury ol */
+ol1 > li > ul a /* wygląd linków znajdujących się wewnąrz struktury ol1 */
 {
 	text-decoration: none;
 	display: block;
 }
 
-ol1 > li > ul > li /* stylizacja elementu li którego rodzicem jest ol */
+.pokaz
+{
+	display: block;	
+}
+
+.ukryj
+{
+	display: none;
+}
+
+ol1 > li > ul > li:first-child
+{
+	border: 1px dotted #ffffff;
+}
+
+ol1 > li > ul > li /* stylizacja elementu li którego rodzicem jest ol1 */
 {
 	float: left;
 	width: 220px;
-	height: 30px;
-	padding: 0 5px;
+	padding: 10px;
 	text-align: left;
 	font-size: 12px;
 	position: relative;
-	border-top: 1px dashed #ffffff;
+	border-bottom: 1px dotted #ffffff;
+	border-left: 1px dotted #ffffff;
+	border-right: 1px dotted #ffffff;
+	z-index: 100;
+}
+
+.koszyk
+{
+	background: #ff6624; 
+	color: #ffffff;
+	padding: 0 5px;
+	border: 0px solid #000000; 
+	font-size: 12px;
+	height: 30px;
+	margin: 10px;
+}
+
+.formularz
+{
+	height: 32px;
+	padding: 0 5px;
+	margin: 10px;
+	color: #000000;
 }

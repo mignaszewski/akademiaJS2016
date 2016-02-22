@@ -1,69 +1,26 @@
-﻿@media all and (min-width: 480px) and (min-height: 768px)
+.pole
 {
-	.pole_prawe, .pole_lewe
-	{
-		float: none;
-		width: auto;
-		margin: 15px;
-	}
-}
-
-.pole_prawe
-{
-	float: left;
-	width: 415px;
 	text-align: justify;
-	padding-left: 50px;
-	padding-right: 25px;
-	padding-top: 25px;
-	padding-bottom: 25px; 
-	position: top;
+	padding: 25px;
 }
 
-.pole_prawe_min	/*responsywność*/
+.tytul
 {
-	margin: 15px 0;
-	padding: 15px;
+	padding: 10px;
+	background-color: #ff6624;
+	color: #ffffff;
 }
 
-.pole_lewe
+.dodaj_mala
 {
-	float: left;
-	width: 415px;
-	text-align: justify;
-	padding-left: 25px;
-	padding-right: 50px;
-	padding-top: 25px;
-	padding-bottom: 25px; 
-	position: top;
-}
-
-.pole_lewe_min	/*responsywność*/
-{
-	margin: 15px 0;
-	padding: 15px;
-}
-
-.zdjecie
-{
-	float: left;
-	width: 100px;
-	height: 100px;
-}
-
-.opis
-{
-	float: left;
-	width: 205px;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
-.dodaj
-{
-	float: left;
-	width: 90px;
 	text-align: center;
+	padding: 10px;
+}
+
+.dodaj_duza
+{
+	text-align: center;
+	padding: 10px;
 }
 
 .submit
@@ -73,6 +30,130 @@
 	padding: 5px;
 	border: 0px solid #000000; 
 	font-size: 12px;
+}
+
+img
+{
+	width: 100%;
+}
+
+.zdjecie
+{
+	padding: 0;
+	margin: 0;
+}
+
+.maly
+{
+	padding: 0;
+	margin: 0;
+}
+
+.duzy
+{
+	padding: 0;
+	margin: 0;
+}
+
+.nadlista
+{	
+	list-style: none; 
+	overflow: hidden; 
+}
+
+.nadlista li
+{
+	float: left;
+}
+
+.nadlista li a
+{
+	text-decoration: none;
+	padding: 10px 0 10px 65px;
+	position: relative;
+	display: block;
+	float: left;
+}
+
+.nadlista li a:after
+{
+	content: " "; 
+	display: block; 
+	width: 0; 
+	height: 0;
+	border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+	border-bottom: 50px solid #ffffff;
+	border-left: 30px solid #ffffff;
+	position: absolute;
+	top: 50%;
+	margin-top: -50px; 
+	margin-left: 1px;
+	left: 100%;
+	z-index: 2; 
+}
+
+.nadlista li:first-child a
+{
+	padding-left: 10px;
+}
+
+.lista
+{
+	min-height: 50px;
+	margin: 0;
+	padding: 5px 0;
+	border-top: 2px dotted #ffffff;
+	border-bottom: 2px dotted #ffffff;
+	border-right: 2px dotted #ffffff;
+}
+
+.lista:first-child
+{
+	
+	border-left: 2px dotted #ffffff;
+}
+
+.zrobione
+{
+	background: #ff6624; 
+	color: #ffffff;
+}
+
+.do_zrobienia
+{
+	background-color: #ffa382;
+}
+
+.usun
+{
+	padding: 0;
+	margin: 0;
+}
+
+.tabela_kolor1:first-child
+{
+	border-top: 2px dotted #ffffff;
+}
+
+.tabela_kolor1
+{
+	background-color: #ffa382 !important;
+	border-bottom: 2px dotted #ffffff;
+	border-left: 2px dotted #ffffff;
+	border-right: 2px dotted #ffffff;
+}
+
+.tabela_kolor2
+{
+	background-color: #ffc3ae !important;
+	border-bottom: 2px dotted #ffffff;
+	border-left: 2px dotted #ffffff;
+	border-right: 2px dotted #ffffff;
+}
+
+table
+{
+	margin: auto;
 }
 
 ol2

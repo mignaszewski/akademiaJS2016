@@ -38,6 +38,24 @@ p
 	margin-top: 5px;
 }
 
+.lista p
+{
+	font-size: 14px;
+	font-family: 'Handlee', cursive;
+	text-align: center;
+	margin: 0;
+	margin-top: 5px;
+}
+
+ol1 > li > ul p
+{
+	font-size: 12px;
+	font-family: 'Handlee', cursive;
+	text-align: justify;
+	margin: 0;
+	padding: 0 10px;
+}
+
 h1
 {
 	font-family: 'Handlee', cursive;
@@ -45,6 +63,16 @@ h1
 	letter-spacing: 2px;
 	line-height: 20px;
 	margin: 0;
+}
+
+ol1 > li > ul h1
+{
+	font-family: 'Handlee', cursive;
+	font-size: 20px;
+	letter-spacing: 2px;
+	line-height: 20px;
+	margin: 0;
+	padding: 10px;
 }
 
 h2
@@ -78,10 +106,13 @@ h4
 }
 
 h5
-{
-	font-size: 16px;
-	font-style: italic;
-	text-align: left;
+{	
+	font-family: 'Handlee', cursive;
+	font-size: 12px;
+	text-align: justify;
+	padding: 0 5px;
+	color: #ff6624;
+	margin: 0;
 }
 
 h6

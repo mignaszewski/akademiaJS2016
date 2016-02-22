@@ -35,36 +35,35 @@ body
 a:link
 {
 	color: #ffffff;
+	text-decoration: none;
 }
 
 /* odwiedzony link */
 a:visited
 {
 	color: #ffffff;
+	text-decoration: none;
 }
 
 /* podświetlony link */
 a:hover
 {
 	color: #000000;
+	text-decoration: none;
 }
 
 /* podświetlony link */
 .opis a:hover
 {
-	color: red;
+	color: #ff6624;
+	text-decoration: none;
 }
 
 /* nieodwiedzony link */
-.opis a:link
+.opis a
 {
-	color: green;
-}
-
-/* odwiedzony link */
-.opis a:visited
-{
-	color: blue;
+	color: #000000;
+	text-decoration: none;
 }
 
 ol a

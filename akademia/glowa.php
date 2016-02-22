@@ -12,4 +12,11 @@
 	<link rel = "stylesheet" href = "css/tresc.css" type = "text/css" />
 	<link rel = "stylesheet" href = "css/czcionki.css" type = "text/css" />
 	<link rel = "stylesheet" href = "css/kolor.css" type = "text/css" />
-	<link rel='stylesheet' href = "icon-mail-alt.css" type='text/css'>
+	<link rel='stylesheet' href = "css/fontello.css" type='text/css'>
+
+<!-- ********** JavaScript ********** -->
+	<script src = "javascript/jquery-1.11.3.min.js"></script>
+	<script src = "javascript/angular/angular.min.js"></script>
+	<script src = "javascript/app.js"></script>
+    <script type = "text/javascript" src ="javascript/rozwin.js"></script>
+    <script type = "text/javascript" src ="javascript/rozwin_menu.js"></script>
