@@ -1,0 +1,221 @@
+.pole
+{
+	text-align: justify;
+	padding: 25px;
+}
+
+.tytul
+{
+	padding: 10px;
+	background-color: #ff6624;
+	color: #ffffff;
+}
+
+.dodaj_mala
+{
+	text-align: center;
+	padding: 10px;
+}
+
+.dodaj_duza
+{
+	text-align: center;
+	padding: 10px;
+}
+
+.submit
+{
+	background: #ff6624; 
+	color: #ffffff;
+	padding: 5px;
+	border: 0px solid #000000; 
+	font-size: 12px;
+}
+
+img
+{
+	width: 100%;
+}
+
+.zdjecie
+{
+	padding: 0;
+	margin: 0;
+}
+
+.opis
+{
+	padding: 0 5px;
+}
+
+.maly
+{
+	padding: 0;
+	margin: 0;
+}
+
+.duzy
+{
+	padding: 0;
+	margin: 0;
+}
+
+.nadlista
+{	
+	list-style: none; 
+	overflow: hidden; 
+}
+
+.nadlista li
+{
+	float: left;
+}
+
+.nadlista li a
+{
+	text-decoration: none;
+	padding: 10px 0 10px 65px;
+	position: relative;
+	display: block;
+	float: left;
+}
+
+.nadlista li a:after
+{
+	content: " "; 
+	display: block; 
+	width: 0; 
+	height: 0;
+	border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+	border-bottom: 50px solid #ffffff;
+	border-left: 30px solid #ffffff;
+	position: absolute;
+	top: 50%;
+	margin-top: -50px; 
+	margin-left: 1px;
+	left: 100%;
+	z-index: 2; 
+}
+
+.nadlista li:first-child a
+{
+	padding-left: 10px;
+}
+
+.lista
+{
+	min-height: 50px;
+	margin: 0;
+	padding: 5px 0;
+	border-top: 2px dotted #ffffff;
+	border-bottom: 2px dotted #ffffff;
+	border-right: 2px dotted #ffffff;
+}
+
+.lista:first-child
+{
+	
+	border-left: 2px dotted #ffffff;
+}
+
+.zrobione
+{
+	background: #ff6624; 
+	color: #ffffff;
+}
+
+.do_zrobienia
+{
+	background-color: #ffa382;
+}
+
+.usun
+{
+	padding: 0;
+	margin: 0;
+}
+
+.tabela_kolor1:first-child
+{
+	border-top: 2px dotted #ffffff;
+}
+
+.tabela_kolor1
+{
+	background-color: #ffa382 !important;
+	border-bottom: 2px dotted #ffffff;
+	border-left: 2px dotted #ffffff;
+	border-right: 2px dotted #ffffff;
+}
+
+.tabela_kolor2
+{
+	background-color: #ffc3ae !important;
+	border-bottom: 2px dotted #ffffff;
+	border-left: 2px dotted #ffffff;
+	border-right: 2px dotted #ffffff;
+}
+
+table
+{
+	margin: auto;
+}
+
+ol2
+{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-size: 16px;
+	height: 30px;
+	line-height: 200%;
+	/*display: inline-block;*/
+}
+
+ol2 a
+{
+	text-decoration: none;
+	display: block;
+}
+
+ol2 > li
+{
+	padding-left: 10px;
+	height: 30px;
+	border: 1px dashed #ffffff;
+}
+
+ol2 > li > ul
+{
+	padding: 10;
+	margin: 0;
+	list-style-type: none;
+	font-size: 16px;
+	height: 30px;
+	line-height: 200%; 
+	display: none;/* schowanie podmenu/potomków*/
+}
+
+/* aby było rowijane menu po jajechaniu kursorem na link */
+ol2 > li:hover > ul
+{
+	display: block; /* pokazuj podmenu/potomków jako element blokowy */
+}
+
+ol2 > li > ul a /* wygląd linków znajdujących się wewnąrz struktury ol */
+{
+	text-decoration: none;
+	display: block;
+}
+
+ol2 > li > ul > li /* stylizacja elementu li którego rodzicem jest ol */
+{
+	float: left;
+	width: 140px;
+	height: 30px;
+	padding: 0 5px;
+	text-align: left;
+	font-size: 12px;
+	position: relative;
+	border-top: 1px dashed #ffffff;
+}

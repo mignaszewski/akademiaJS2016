@@ -1,0 +1,301 @@
+body
+{
+	margin: 0 !important;
+}
+
+#glowny
+{
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.naglowek
+{
+	width: 100%;
+}
+
+k1, k2
+{
+	cursor: pointer;
+}
+
+.przycisk
+{
+	margin-top: 20px;
+	text-align: center;
+}
+
+.szukaj
+{
+	float: left;
+	padding: 20px;
+}
+
+.pasek
+{
+	height: 31px;
+}
+
+.pasek2
+{
+	height: 31px;
+}
+
+.menu
+{
+	float: left;
+	width: 100%;
+	text-align: center;
+	min-height:80%;
+}
+
+.menu_min	/*responsywność*/
+{
+	margin: 15px 0;
+	padding: 15px;
+}
+
+.koszyk_menu
+{
+	padding: 5px 0;
+	border-bottom: 1px solid #ffffff;
+}
+
+#tresc
+{
+	min-height: 385px;
+	padding: 10px;
+}
+
+.sticky_top
+{
+	margin-right: auto;
+	margin-left: auto;
+	position: fixed; /* fixed - stała, przyklejone */
+	left: auto;
+	top: 0;
+	z-index: 100; /* głębia, zasłanianie się. Im ma większe tym więcej zasłania */
+}
+
+#stopka
+{
+	width: 100%;
+}
+
+.sticky_bottom
+{
+	margin-right: auto;
+	margin-left: auto;
+	position: fixed; /* fixed - stała, przyklejone */
+	left: auto;
+	bottom: 0;
+	z-index: 100; /* głębia, zasłanianie się. Im ma większe tym więcej zasłania */
+}
+
+ol
+{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-size: 16px;
+	height: 30px;
+	line-height: 200%;
+	/*display: inline-block;*/
+}
+
+ol a
+{
+	text-decoration: none;
+	display: block;
+}
+
+ol > li
+{
+	float: right;
+	height: 30px;
+	padding: 0 20px;
+	/*border-right: 1px dotted #ffffff;
+	border-top: 1px dotted #ffffff;*/
+}
+
+ol > li:first-child
+{
+	/*border-left: 1px dotted #ffffff;*/
+}
+
+ol > li > ul
+{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-size: 16px;
+	height: 30px;
+	line-height: 200%; 
+	display: none;/* schowanie podmenu/potomków*/
+}
+
+/* aby było rowijane menu po jajechaniu kursorem na link */
+ol > li:hover > ul
+{
+	display: block; /* pokazuj podmenu/potomków jako element blokowy */
+}
+
+ol > li > ul a /* wygląd linków znajdujących się wewnąrz struktury ol */
+{
+	text-decoration: none;
+	display: block;
+}
+
+ol > li > ul > li /* stylizacja elementu li którego rodzicem jest ol */
+{
+	float: right;
+	width: 140px;
+	padding: 0 5px;
+	text-align: left;
+	font-size: 12px;
+	position: relative;
+	/*border-top: 1px dotted #ffffff;*/
+}
+
+ol1
+{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-size: 16px;
+	line-height: 200%;
+	/*display: inline-block;*/
+}
+
+ol1 a
+{
+	text-decoration: none;
+	display: block;
+}
+
+ol1 > li
+{
+	float: left;
+	width: 50px;
+	height: 50px;
+}
+
+/*ol1 > li:first-child
+{
+	border-left: 1px dashed #ffffff;
+}*/
+
+ol1 > li > ul
+{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-size: 16px;
+	height: 30px;
+	line-height: 200%; 
+	/*display: none;/* schowanie podmenu/potomków*/
+	position: absolute; /*pozysja ustalona*/
+	right: 0; /*wyrównanie do prawej rozwijanego elementu*/
+}
+
+
+/* aby było rowijane menu po jajechaniu kursorem na link */
+ol1 > li:hover > ul
+{
+	display: block; /* pokazuj podmenu/potomków jako element blokowy */
+}
+
+ol1 > li > ul a /* wygląd linków znajdujących się wewnąrz struktury ol1 */
+{
+	text-decoration: none;
+	display: block;
+}
+
+.pokaz
+{
+	display: block;	
+}
+
+.ukryj
+{
+	display: none;
+}
+
+ol1 > li > ul > li:first-child
+{
+	border: 1px dotted #ffffff;
+}
+
+ol1 > li > ul > li /* stylizacja elementu li którego rodzicem jest ol1 */
+{
+	float: left;
+	width: 220px;
+	padding: 10px;
+	text-align: left;
+	font-size: 12px;
+	position: relative;
+	border-bottom: 1px dotted #ffffff;
+	border-left: 1px dotted #ffffff;
+	border-right: 1px dotted #ffffff;
+	z-index: 100;
+}
+
+.koszyk
+{
+	background: #ff6624; 
+	color: #ffffff;
+	padding: 0 5px;
+	border: 0px solid #000000; 
+	font-size: 12px;
+	height: 30px;
+	margin: 10px;
+}
+
+.plus_minus
+{
+	background: #ffa382; 
+	border-radius: 100%;
+	padding: 0;
+	border: 0; 
+	margin: 0;
+	text-align: center;
+}
+
+.koszyk_maly
+{
+	background: #ffa382; 
+	color: #ffffff;
+	padding: 0;
+	border: 0px; 
+	font-size: 12px;
+	height: 20px;
+	margin: 0;
+}
+
+.x
+{
+	background: red; 
+	padding: 0;
+	border: 0; 
+	margin: 0;
+	text-align: center;
+}
+
+.koszyk_maly_x
+{
+	background: red; 
+	color: #ffffff;
+	padding: 0;
+	border: 0px; 
+	font-size: 12px;
+	height: 20px;
+	margin: 0;
+}
+
+.formularz
+{
+	height: 32px;
+	padding: 0 5px;
+	margin: 10px;
+	color: #000000;
+}

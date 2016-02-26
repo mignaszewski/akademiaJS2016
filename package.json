@@ -1,0 +1,19 @@
+{
+  "name": "akademia",
+  "version": "1.0.0",
+  "main": "cos.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mignaszewski/akademiaJS2016.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mignaszewski/akademiaJS2016/issues"
+  },
+  "homepage": "https://github.com/mignaszewski/akademiaJS2016#readme",
+  "description": ""
+}
