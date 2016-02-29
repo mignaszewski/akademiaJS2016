@@ -1,0 +1,59 @@
+<!--caruse end-->
+<div class="container">
+    <!--panel-->
+    <div class="row panels ">
+        <div ng-repeat="item in items">
+            <div class="col-md-4 col-xs-6">
+                <div class="thumbnail panel-large" data-toggle="modal" data-target="#myModal">
+                    <img class="panel-images" ng-src="{{item.img}}">
+                    <div class="caption">
+                        <h3 class="name">{{item.name}}</h3>
+                        <p id="description">{{item.description}}</p>
+                        <p id="cost">{{item.cost | currency}}</p>
+                    </div>
+                    <button ID="show-it" class="btn btn-danger btn-lg">
+                        Show it!
+                    </button>
+                    <!--  <div class="star">Star: {{guitar.star}}</div>-->
+                </div>
+            </div>
+            <!--modal-->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" id="close-modal" data-dismiss="modal"
+                                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 id="names">    <!--NAME-->        </h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <img class="col-xs-6 images-panels">
+                                <div class="col-xs-6">
+                                    <div class="row">
+                                        <img class="col-xs-6" src="img/gibson.png"/>
+                                        <img class="col-xs-6" src="img/gibson.png"/>
+                                        <img class="col-xs-6" src="img/gibson.png"/>
+                                        <img class="col-xs-6" src="img/gibson.png"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <p class="col-md-8" id="descriptions"> <!--DESCRIPTION--></p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-lg btn-success" ng-click="">Add to Card</button>
+                            <h4 class="pull-left" id="costs"><!--COST--></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--modal-->
+        </div>
+        <!--panel-->
+    </div>
+    <!--end panels row-->
+</div>
+
+<script>$(document).ready(function(){ $("#content").fadeIn(300); });</script>

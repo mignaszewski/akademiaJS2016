@@ -1,0 +1,405 @@
+html,
+body {
+    height: 100%;
+    background-color: dimgrey;
+}
+
+#created{
+    color: aliceblue;
+    font-size:20px;
+    padding: 3px;
+    font-weight: bold;
+  
+}
+
+body {
+    padding-top: 50px;
+    overflow-x: hidden;
+}
+
+#alertps2 {
+    display: none;
+}
+
+.help-block {
+    color: red !important;
+    letter-spacing: 1px;
+}
+
+#allertnumber {
+    display: none;
+}
+
+.navbar {
+    background-color: black;
+
+}
+
+.navbar-brand {
+    background-color: #003600;
+    font-weight: bold;
+}
+
+.mark{
+    color: red;
+    font-size: 150%;
+}
+
+.star {
+    display: none;
+}
+
+#checkbox {
+    margin: 10px 0;
+}
+
+.ui-accordion-header {
+    margin: 10px auto;
+    padding: 5px;
+    text-indent: 10px;
+    border-radius: 5px;
+    background-color: #000000;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.ui-accordion-header-active {
+    background-color: #751B1B;
+    color: white;
+}
+
+#registry {
+
+    background-color: #751B1B;
+    border: none;
+}
+
+.login {
+    background-color: #383838;
+    color: white;
+}
+
+.margin-10 {
+    margin: 10px 0;
+}
+
+.login:hover {
+    color: white;
+    background-color: black;
+}
+
+.form-control {
+    color: white;
+}
+
+.close {
+    color: rgb(255, 40, 55);
+    font-size: 50px;
+    top: 5%;
+    right: 5%;
+    position:absolute ;
+    z-index: 10000;
+}
+
+.user-adress {
+    margin: 30px 0;
+}
+
+#cart {
+    background-color: #003600;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    padding: 10px 0;
+    border: none;
+}
+
+.dropdown-menu {
+    margin: 0 30px;
+    opacity: 0.9;
+    padding: 10px;
+    background-color: grey;
+}
+
+.hamburger {
+    margin: 0 30px;
+}
+
+.nav > li > a:hover {
+    background-color: black;
+}
+
+nav a {
+    color: white;
+    transition: 0.5s color linear;
+}
+
+nav a:hover {
+    color: #848484;
+}
+
+.navbar-brand {
+    transition: background-color 0.5s linear;
+}
+
+.container {
+    padding: 0 0 50px 0;
+}
+
+header.carousel {
+    height: 200px;
+}
+
+header.carousel .item,
+header.carousel .item.active,
+header.carousel .carousel-inner {
+    height: 100%;
+}
+
+.footer {
+    opacity: 0.5;
+}
+
+.carousel-indicators {
+    margin: 0 0;
+}
+
+#multiply {
+
+    text-align: center;
+    border-radius: 3px;
+    color: black;
+}
+
+header.carousel .fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.modal-footer, .modal-header {
+    background-color: #484848;
+    color: white;
+}
+
+.main-box{
+    height:320px;
+    margin-top: 10%;
+}
+
+.box-content{
+    margin-top: 5%;
+}
+
+.panel-images{
+   max-height: 100%;
+   max-width: 100%;
+}
+
+.box-images{
+    max-height: 70%;
+    max-width: 70%;
+}
+
+.minatures{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin: 5px;
+    border: solid 1px grey;
+}
+
+.orderby{
+    margin-top: 10px;
+    text-align: right;
+}
+
+.thumbnail {
+    margin-top: 20px;
+    opacity: 0.95;
+    transition: 0.3s linear all;
+    background-color: #acacac;
+    border: none;
+    min-height: 600px;
+}
+
+.panels{
+    min-height: 260px;
+}
+
+.thumbnail:hover {
+    opacity: 1.0;
+    background-color: white;
+}
+
+
+.modal-body img {
+    border: grey 1px solid;
+    padding: 5px;
+}
+
+.footer-button {
+    margin: 0 10px;
+    background-color: black;
+    color: white;
+    transition: 0.5s linear background-color;
+}
+
+.footer-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.footer-button:hover > a {
+    color: black;
+    font-weight: bolder;
+}
+
+.carousel-indicators {
+    width: auto;
+}
+
+.carousel-control{
+    font-size: 130px;
+}
+
+.contact {
+    margin-right: 30px;
+}
+
+.footer-button > a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.navbar-bottom {
+    bottom: 0;
+    position: absolute;
+}
+
+header.carousel .carousel {
+    height: 70%;
+}
+
+ol {
+    list-style-type: none;
+    font-size: 18px;
+    line-height: 200%;
+    display: inline-block;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+ol a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.lightbox{
+    position: fixed;
+    left: 0;
+    top:0;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: block;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+}
+
+.cssFade {
+    transition: 0.5s linear all;
+    opacity: 1;
+}
+
+.cssFade.ng-hide {
+    opacity: 0;
+}
+
+ol > li {
+    float: left;
+    width: 100px;
+    height: 35px;
+    border: 1px solid grey;
+    background-color: #383838;
+    transition: 0.5s all linear;
+}
+
+ol > li:last-child {
+    background-color: #751b1b;
+    transition: background-color 0.5s linear;
+}
+
+ol > li:first-child {
+    background-color: #751b1b;
+    transition: background-color 0.5s linear;
+}
+
+ol > li:last-child > a {
+    transition: 0.5s color linear;
+}
+
+#accept {
+    font-size: 130%;
+    text-align: center;
+    letter-spacing: 1px;
+
+}
+
+#accept label {
+    display: block;
+    margin: 20px 5px;
+}
+
+label [type="checkbox"] {
+    margin-left: 30px;
+}
+
+ol > li:last-child > a:hover {
+    color: red;
+}
+
+ol > li:hover {
+    background-color: black;
+}
+
+ol > li:hover > a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+ol > li > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 40px;
+    display: none;
+}
+
+/*ol > li:hover > ul {*/
+/*display: block;*/
+/*}*/
+
+ol > li > ul > li {
+    background-color: #7b7b7b;
+    transition: 0.3s background-color linear;
+    position: relative;
+    z-index: 100;
+    border-top: 1px solid #05022f;
+
+}
+
+ol > li > ul > li:hover {
+    background-color: #505050;
+}
+
+ol > li > ul > li:hover > a {
+    color: #ffffff;
+    text-decoration: none;
+}

@@ -1,0 +1,175 @@
+[
+  {
+    "id": 1,
+    "name": "1fender",
+    "description": "sgsgsdgf sg sgfs gsf sf s sg sgs ",
+    "images": [
+      "img/gibson.png",
+      "img/Guitar_Silhouette.png",
+      "img/Guitar_Silhouette.png"
+    ],
+    "star": 1,
+    "cost": 300,
+    "canPurchase": true
+  },
+  {
+    "id": 1,
+    "name": "2t.barton",
+    "description": "sgsgsdgf sg sgfs gsf sf s sg sgs ",
+    "images": [
+      "img/Guitar_Silhouette.png",
+      "img/gibson.png",
+      "img/Guitar_Silhouette.png",
+      "img/Guitar_Silhouette.png",
+      "img/Guitar_Silhouette.png"
+    ],
+    "reviews": [
+      {
+        "stars": 5,
+        "body": "vnweoiw3 43t g trg 3rsfsfhtc",
+        "author": "jod@gmskf.com"
+      },
+      {
+        "stars": 5,
+        "body": "vnweoiw3 43t g trg 3rsfsfhtc",
+        "author": "jod@gmskf.com"
+      },
+      {
+        "stars": 5,
+        "body": "vnweoiw3 43t g trg 3rsfsfhtc",
+        "author": "jod@gmskf.com"
+      }
+    ],
+    "star": 5,
+    "cost": 240,
+    "canPurchase": true
+  },
+  {
+    "id": 3,
+    "name": "3t.barton",
+    "description": "sgsgsdgf sg sgfs gsf sf s sg sgs ",
+    "images": [
+      "img/Guitar_Silhouette.png",
+      "img/gibson.png",
+      "img/Guitar_Silhouette.png",
+      "img/Guitar_Silhouette.png",
+      "img/Guitar_Silhouette.png"
+    ],
+    "reviews": [
+      {
+        "stars": 5,
+        "body": "vnweoiw3 43t g trg 3rsfsfhtc",
+        "author": "jod@gmskf.com"
+      },
+      {
+        "stars": 5,
+        "body": "vnweoiw3 43t g trg 3rsfsfhtc",
+        "author": "jod@gmskf.com"
+      },
+      {
+        "stars": 5,
+        "body": "vnweoiw3 43t g trg 3rsfsfhtc",
+        "author": "jod@gmskf.com"
+      }
+    ],
+    "star": 5,
+    "cost": 240,
+    "canPurchase": true
+  },
+  {
+    "id": 4,
+    "name": "at.barton",
+    "description": "sgsgsdgf sg sgfs gsf sf s sg sgs ",
+    "images": [
+      "img/Guitar_Silhouette.png",
+      "img/gibson.png",
+      "img/Guitar_Silhouette.png",
+      "img/Guitar_Silhouette.png",
+      "img/Guitar_Silhouette.png"
+    ],
+    "reviews": [
+      {
+        "stars": 3,
+        "body": "vnweoiw3 43t g trg 3rsfsfhtc",
+        "author": "jod@gmskf.com"
+      },
+      {
+        "stars": 4,
+        "body": "vnweoiw3 43t g trg 3rsfsfhtc",
+        "author": "jod@gmskf.com"
+      },
+      {
+        "stars": 1,
+        "body": "vnweoiw3 43t g trg 3rsfsfhtc",
+        "author": "jod@gmskf.com"
+      }
+    ],
+    "star": 5,
+    "cost": 240,
+    "canPurchase": true
+  },
+  {
+    "id": 5,
+    "name": "bt.barton",
+    "description": "sgsgsdgf sg sgfs gsf sf s sg sgs ",
+    "images": [
+      "img/Guitar_Silhouette.png",
+      "img/gibson.png",
+      "img/Guitar_Silhouette.png",
+      "img/Guitar_Silhouette.png",
+      "img/Guitar_Silhouette.png"
+    ],
+    "reviews": [
+      {
+        "stars": 57,
+        "body": "vnweoiw3 43t g trg 3rsfsfhtc",
+        "author": "jod@gmskf.com"
+      },
+      {
+        "stars": 8,
+        "body": "vnweoiw3 43t g trg 3rsfsfhtc",
+        "author": "jod@gmskf.com"
+      },
+      {
+        "stars": 5,
+        "body": "vnweoiw3 43t g trg 3rsfsfhtc",
+        "author": "jod@gmskf.com"
+      }
+    ],
+    "star": 5,
+    "cost": 240,
+    "canPurchase": true
+  },
+  {
+    "id": 6,
+    "name": "ct.barton",
+    "description": "sgsgsdgf sg sgfs gsf sf s sg sgs ",
+    "images": [
+      "img/Guitar_Silhouette.png",
+      "img/gibson.png",
+      "img/Guitar_Silhouette.png",
+      "img/Guitar_Silhouette.png",
+      "img/Guitar_Silhouette.png"
+    ],
+    "reviews": [
+      {
+        "stars": 1,
+        "body": "vnweoiw3 43t g trg 3rsfsfhtc",
+        "author": "jod@gmskf.com"
+      },
+      {
+        "stars": 4,
+        "body": "vnweoiw3 43t g trg 3rsfsfhtc",
+        "author": "jod@gmskf.com"
+      },
+      {
+        "stars": 2,
+        "body": "vnweoiw3 43t g trg 3rsfsfhtc",
+        "author": "jod@gmskf.com"
+      }
+    ],
+    "star": 5,
+    "cost": 240,
+    "canPurchase": true
+  }
+]

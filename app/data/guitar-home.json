@@ -1,0 +1,50 @@
+ [
+    {
+      "name": "fender",
+      "description": "sgsgsdgf sg sgfs gsf sf s sg sgs ",
+      "img": "img/gibson.png",
+      "star": 1,
+      "cost": 300,
+      "canPurchase": true
+    },
+    {
+      "name": "t.barton",
+      "description": "sgsgsdgf sg sgfs gsf sf s sg sgs ",
+      "img": "img/gibson.png",
+      "star": 5,
+      "cost": 240,
+      "canPurchase": true
+    },
+    {
+      "name": "Everplay",
+      "description": "sfhfjghdfg  hsafa soufha jqpj sdf shd jdgjhx fdgsgsrharf s sg sgs ",
+      "img": "img/slider-img.jpg",
+      "star": 4,
+      "cost": 22,
+      "canPurchase": false
+    },
+    {
+      "name": "Everplay",
+      "description": "sfhfjghdfg  hsafa soufha jqpj sdf shd jdgjhx fdgsgsrharf s sg sgs ",
+      "img": "img/gibson.png",
+      "star": 1,
+      "cost": 22,
+      "canPurchase": true
+    },
+    {
+      "name": "Everplay",
+      "description": "sfhfjghdfg  hsafa soufha jqpj sdf shd jdgjhx fdgsgsrharf s sg sgs ",
+      "img": "img/Guitar_Silhouette.png",
+      "star": 2,
+      "cost": 22,
+      "canPurchase": true
+    },
+    {
+      "name": "Everplay",
+      "description": "sfhfjghdfg  hsafa soufha jqpj sdf shd jdgjhx fdgsgsrharf s sg sgs ",
+      "img": "img/Guitar_Silhouette.png",
+      "star": 2,
+      "cost": 22,
+      "canPurchase": false
+    }
+  ]
