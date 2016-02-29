@@ -4,7 +4,7 @@ route.config(function($routeProvider) {
     $routeProvider
 
         .when('/', {
-            templateUrl : 'pages/home.html',
+            templateUrl : 'pages/view1.html',
             controller  : 'mainController'
         })
         /*.when('/cart', {
