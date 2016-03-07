@@ -1,0 +1,114 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, img, ins, kbd, q, s, samp, small, strike, strong, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none;}
+fieldset {border: 0;}
+object {display: block;}
+table {border-collapse: collapse; border-spacing: 0;}
+
+/*domyślne wartości Body */
+body {
+    background: #fff;
+    font: 62.5%/1.5em Verdana, Arial, sans-serif;
+    color: #303030;
+}
+
+/*kontener */
+.container{
+    width: 968px;
+    margin: 0 auto;
+}
+
+/*wyzerowanie formularza */
+form fieldset{
+    border: 0;
+}
+
+/*linki*/
+a{
+    text-decoration: none;
+    color: #303030;
+}
+a:visited{}
+a:hover{}
+a:active{}
+
+/*header*/
+#header{
+    margin: 153px 0 0 0;
+}
+#header #container {
+    border: 1px solid #ccbaa9;
+    height: 263px;
+    background: #eaebdb url(../images/obrazek-header.jpg) 100% 50% no-repeat;
+    position: relative;
+}
+
+/*logo*/
+#header h1 {
+    position: absolute;
+    top: -50px;
+    overflow: hidden;
+}
+#header h1 a{
+    display: block;
+    width: 396px;
+    height: 32px;
+    position: relative;
+}
+#header h1 a span {
+    display: block; 
+    width: 396px;
+    height: 32px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/logo.jpg) no-repeat;
+    cursor: pointer;
+}
+
+/*infolinia */
+#header h2{
+    position: absolute;
+    top: -33px;
+    right: 26px;
+    overflow: hidden;
+    width:  186px;
+    height: 19px;
+}
+
+#header h2 span{
+    display: block;
+    height:19px;
+    width: 186px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/infolinia.jpg)no-repeat; 
+}
+
+/*nawigacja*/
+#header .menu{
+    margin: 0 0 25px 42px;
+    width: 411px;
+    height: 58px;
+    list-style: none;
+}
+#header .menu li{
+    float: left;
+    padding-right: 2px;
+    height: 58;
+    background: url(../images/odstep-menu.png)100% 100% no-repeat;
+}
+#header . menu li a{
+    position:relative;   
+}
+header .menu li a span{
+    display: block;
+    height: 44px;
+    position: absolute;
+    top:0;
+    left: 0;
+    cursor: pointer;
+}

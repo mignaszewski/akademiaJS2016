@@ -1,0 +1,160 @@
+body{
+    margin: 0;
+    background: black;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 11px;
+    color: black;
+}
+
+img{
+    border:0;
+}
+
+ul{
+    list-style-image: url("../gfx/arrow.gif");
+    line-height: 1.4;
+}
+.lista-linkow{
+    margin: 10px;
+    font-weight: bold;
+    font-size: 0.9em;
+    border-top: 1px #ccc dashed;
+}
+#wrapper{
+    width: 920px;
+    margin: 0 auto;
+    background: black;
+}
+#top{
+    background-image: url("../gfx/top.jpg");
+    height: 121px;
+    position: relative;
+    
+}
+#logo h1{
+    background: url(../gfx/logo.png) no-repeat;
+    height: 50px;
+    position:absolute;
+    width: 150px;
+    top:45px;  
+}
+
+#logo h1 a{
+    display: block;
+    text-indent: -999px;
+    
+}
+#nav {
+    background: #515151;
+    border-top:1px #ccc solid;
+}
+#nav ul{
+    margin:0;
+    padding: 10px 0 ;
+}
+#nav ul li{
+    display: inline;
+    list-style: none;
+}
+#nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 11px;
+}
+#nav ul li a:hover{
+    background: #fff;
+    color:#000;
+}
+#numer{
+    margin:-24px 13px 12px 0;
+    text-align: right;
+    color:white;
+    background: url("../gfx/telefon.gif") right 50% no-repeat;
+    padding-right: 30px;
+    
+}
+#content{
+    background: #fff;
+    border: 1px;
+    padding-top: 1px;
+    float: left;
+    width: 100%;
+   
+}
+#content p{
+    margin: 0;
+    padding: 1em;
+    line-height: 1.4;
+}
+#content h3{
+    margin: 1em;
+    font-size: 1.1em;
+    padding: 5px;
+    
+}
+#content h2{
+    display: block;
+    width: 300px;
+    font-size: 1.3em;
+    padding: 1em;
+    margin: 2em 0 1.5 0;
+    background: url("../gfx/kreski.gif") repeat;
+}
+
+#content #c1{
+    width: 600px;
+    float: left;
+}
+#content #obrazki{
+    padding: 1em;
+    text-align: center;
+}
+#content #obrazki img{
+    padding: 1em;
+}
+#content #c2 h2{
+    width: 200px;
+    margin: 0;
+    padding: 1em;
+    font-size: 1.1em;
+    display: block;
+    background-image: none;
+    border-left: 3px #999 solid;
+}
+#content #c2{
+    width: 300px;
+    background: url("../gfx/kreski2.gif");
+    float: right;
+    height: 
+}
+
+#content #c2 #c2-wrapper{
+    background: #fff;
+    margin-left: 23px;
+    font-size: 1.2em;
+}
+
+#footer{
+    background: #343434;
+    color:white;
+    float: left;width: 100%
+}
+#copy, #footer-menu{
+    width: 300px;
+    padding: 10px;
+    
+}
+#footer #copy{
+    float: left;
+    
+}
+#footer-menu{
+    float: right;
+    text-align: right;
+}
+#footer-menu a{
+    color:#fff;
+    padding:  0 5 px;
+    text-decoration: none;
+}
